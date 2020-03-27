@@ -8,6 +8,7 @@ import os
 import json
 import csv
 import pandas as pd
+from geopy.geocoders import Nominatim
 
 load_dotenv()
 
@@ -15,10 +16,21 @@ app = flask.Flask(__name__)
 app.Debug = os.getenv("DEBUG")
 CORS(app)
 
+STATE_DATA = None
+geolocator = Nominatim(user_agent="main")
+
 @app.route('/', methods=['GET'])
 def main():
     message = ''
     return render_template('index.html', message=message)
+
+def get_stats_loc(lat,lng):
+     location = geolocator.reverse(str(lat)+", "+str(lng))
+     raw_state = location.raw['address']['state']
+     raw_county = location.raw['address']['county']
+     raw_county = raw_county[:raw_county.index(" County")]
+     print(lat,',',lng,':',STATE_DATA[raw_state][raw_county])
+
 
 # if __name__ == '__main__':
 #     app.run(debug=os.getenv("DEBUG"))
@@ -27,13 +39,12 @@ STATE_DATA_URL = "https://covidtracking.com/api/states/daily"
 remove = ['dateChecked','pending','total']
 def get_state_data(date, data = None):
     date =int(date.strftime("%Y%m%d"))
-    print(date)
     if not data:
         data = requests.get(STATE_DATA_URL).json()
     ret = [x for x in data if (x["date"] == date)]
     for x in ret:
         for y in remove:
-            if y in x:
+            if y == x:
                 x.pop(y)
     return ret
 
@@ -66,8 +77,6 @@ def aggregate_city_states(date):
     total = {}
     return total_data
 
+STATE_DATA =  aggregate_city_states(datetime(2020,3,26))
+#get_stats_loc(,)
 
-    
-    
-
-open('test.json','w').write(json.dumps(aggregate_city_states(datetime(2020,3,26))))
