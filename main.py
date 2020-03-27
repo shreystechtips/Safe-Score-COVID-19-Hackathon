@@ -59,10 +59,15 @@ def aggregate_city_states(date):
     total_data = {}
     for y in city:
         y = city[y]
-        if not y['Province_State'] in total_data:
-            total_data[y['Province_State']] = {}
-        total_data[y['Province_State']][y['Admin2']] = y
+        if not str(y['Admin2']).lower() == 'nan':
+            if not y['Province_State'] in total_data:
+                total_data[y['Province_State']] = {}
+            total_data[y['Province_State']][y['Admin2']] = y
     total = {}
     return total_data
 
-open('tst.json','w').write(json.dumps(aggregate_city_states(datetime(2020,3,26))))
+
+    
+    
+
+open('test.json','w').write(json.dumps(aggregate_city_states(datetime(2020,3,26))))
