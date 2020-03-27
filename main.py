@@ -24,16 +24,21 @@ def main():
 #     app.run(debug=os.getenv("DEBUG"))
 
 STATE_DATA_URL = "https://covidtracking.com/api/states/daily"
+remove = ['dateChecked','pending','total']
 def get_state_data(date, data = None):
     date =int(date.strftime("%Y%m%d"))
     print(date)
     if not data:
         data = requests.get(STATE_DATA_URL).json()
     ret = [x for x in data if (x["date"] == date)]
+    for x in ret:
+        for y in remove:
+            if y in x:
+                x.pop(y)
     return ret
 
 CITY_DATA_BASE_URL = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/"
-def get_city_data(date, data = None):
+def get_county_data(date, data = None):
     url = CITY_DATA_BASE_URL+date.strftime("%m-%d-%Y.csv")
     data = requests.get(url).content.decode('utf-8')
     write = open('temp.csv','w')
@@ -42,13 +47,22 @@ def get_city_data(date, data = None):
     cols = ['Admin2','Province_State','Country_Region','Last_Update','Lat','Long_','Confirmed','Deaths']
     # removed_cols: (['FIPS','Recovered','Active','Combined_Key'])
     f = open('temp.csv','r+')
-    data = pd.read_csv(f, usecols = cols,parse_dates = ["Last_Update"])
+    data = pd.read_csv(f, usecols = cols,)#parse_dates = ["Last_Update"]
     # data.rename(columns = {'Admin2':'City'}, inplace = True) 
-    return data[data['Country_Region'].str.contains('US')]
+    return data[data['Country_Region'].str.contains('US')].to_dict("index")
 
 
 
-def aggregate_city_states():
+def aggregate_city_states(date):
+    city = get_county_data(date)
+    state = get_state_data(date)
+    total_data = {}
+    for y in city:
+        y = city[y]
+        if not y['Province_State'] in total_data:
+            total_data[y['Province_State']] = {}
+        total_data[y['Province_State']][y['Admin2']] = y
     total = {}
+    return total_data
 
-print(get_city_data(datetime(2020,3,26)))
+open('tst.json','w').write(json.dumps(aggregate_city_states(datetime(2020,3,26))))
