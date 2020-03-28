@@ -9,6 +9,9 @@ import json
 import csv
 import pandas as pd
 from geopy.geocoders import Nominatim
+import nyt_inhome
+import numpy as np
+np.seterr(divide='ignore')
 
 # NOTE: GIT DATA BEFORE 03-22-2020 IS BAD. THE FORMAT DOES NOT MATCH OUT CODE
 load_dotenv()
@@ -19,6 +22,7 @@ CORS(app)
 
 STATE_DATA = None
 PREV_DATA = None
+INHOME_ORDERS = None
 POP_DATA = None
 MASTER_DATE = None
 geolocator = Nominatim(user_agent=__name__)
@@ -31,7 +35,12 @@ def main():
 
 
 def set_data(date):
-    return aggregate_city_states(MASTER_DATE), aggregate_city_states(MASTER_DATE-timedelta(days=5))
+    global STATE_DATA
+    STATE_DATA = aggregate_city_states(date)
+    global PREV_DATA
+    PREV_DATA = aggregate_city_states(date-timedelta(days=5))
+    global INHOME_ORDERS
+    INHOME_ORDERS = nyt_inhome.scrape()
 
 
 def get_latest_data_date():
@@ -43,9 +52,32 @@ def get_latest_data_date():
     else:
         return date
 
+
+def at_home(geopy_obj):
+    for order in INHOME_ORDERS:
+        go = 'statename' in order
+        if go and order['statename'] == geopy_obj.raw['address']['state']:
+            state = order['statename']
+            if 'statewide' in order and order['statewide']:
+                return True
+            if 'cities' in order:
+                city = next((x for x in order['cities'] if x['place_fmt']
+                             == geopy_obj['address']['city']), None)
+                if city:
+                    return True
+            if 'county_data' in order:
+                county = next((x for x in order['county_data']
+                               if x['place_fmt'] == geopy_obj.raw['address']['county']), None)
+                if county:
+                    return True
+    return False
+
 # NOTE: to pass in lat/lng pass in lat= and lng= FLOAT params with ? after url
 @app.route('/location/stats', methods=['GET'])
 def get_stats_loc(lat=0, lng=0, stringify=True, MASTER_DATE=MASTER_DATE):
+    if STATE_DATA == None:
+        MASTER_DATE = get_latest_data_date()
+        set_data(MASTER_DATE)
     if not MASTER_DATE:
         MASTER_DATE = get_latest_data_date()
         set_data(MASTER_DATE)
@@ -61,9 +93,15 @@ def get_stats_loc(lat=0, lng=0, stringify=True, MASTER_DATE=MASTER_DATE):
     raw_county = location.raw['address']['county']
     # print(lat, ',', lng, ':', STATE_DATA[raw_state]
     #       [raw_county[:raw_county.index(" County")]])
-    # print(POP_DATA[raw_state][raw_county])
-    covid = STATE_DATA[raw_state][raw_county[:raw_county.index(" County")]]
-    covid_old = PREV_DATA[raw_state][raw_county[:raw_county.index(" County")]]
+    # print(POP_DATA[raw_state][raw_county])s
+    # print(STATE_DATA[raw_state])
+    # print(raw_county)
+    short_county = raw_county[:raw_county.index(" County")]
+    covid = STATE_DATA[raw_state][next(
+        (x for x in STATE_DATA[raw_state] if short_county in x))]
+    covid_old = PREV_DATA[raw_state][next(
+        (x for x in PREV_DATA[raw_state] if short_county in x))]
+
     pop = POP_DATA[raw_state][raw_county]
     ret = {}
     ret['County'] = raw_county
@@ -74,14 +112,19 @@ def get_stats_loc(lat=0, lng=0, stringify=True, MASTER_DATE=MASTER_DATE):
     ret['State'] = raw_state
     ret['CountyCoords'] = {'lat': covid['Lat'], 'lng': covid['Long_']}
     ret['Infected'] = covid['Confirmed']
-    ret['Infected_Rate_Growth'] = covid['Confirmed']/covid_old['Confirmed']
+    ret['Infected_Rate_Growth'] = np.divide(
+        covid['Confirmed'], covid_old['Confirmed'])
     ret['Deaths'] = covid['Deaths']
-    ret['Death_Rate_Growth'] = covid['Deaths']/covid_old['Deaths']
-    ret['Growth_Index'] = covid['Confirmed']/covid_old['Confirmed'] * \
-        ret['Infected']/ret['Population'] * covid['Deaths']/covid_old['Deaths']
+    ret['Death_Rate_Growth'] = np.divide(covid['Deaths'], covid_old['Deaths'])
+    ret['Growth_Index'] = np.divide(covid['Confirmed'], covid_old['Confirmed']) * np.divide(
+        ret['Infected'], ret['Population']) * np.divide(covid['Deaths'], covid_old['Deaths'])
+    ret['Stay_Home'] = at_home(location)
     if not stringify:
         return ret
     return jsonify(ret), 200
+
+
+# def calculate_value()
 
 
 STATE_DATA_URL = "https://covidtracking.com/api/states/daily"
@@ -130,7 +173,8 @@ POP_FILE = './RawData/Census Population Density by County.csv'
 def get_pop_data():
     cols = ['Geographic area', 'Geographic area.1', 'Population', 'Housing units',
             'Area in square miles - Land area', 'Density per square mile of land area - Population']
-    data = pd.read_csv(open(POP_FILE, 'r', encoding='ISO-8859-1'), skiprows=1, usecols=cols)
+    data = pd.read_csv(
+        open(POP_FILE, 'r', encoding='ISO-8859-1'), skiprows=1, usecols=cols)
     data = data[data['Geographic area.1'].str.contains(' County')]
     total_data = {}
     for index, col in data.iterrows():
@@ -159,7 +203,7 @@ def aggregate_city_states(date):
 POP_DATA = get_pop_data()
 # open('pop_data.json','w').write(json.dumps(POP_DATA))
 MASTER_DATE = get_latest_data_date()
-STATE_DATA, PREV_DATA = set_data(MASTER_DATE)
+set_data(MASTER_DATE)
 
 if __name__ == '__main__':
     app.run(debug=os.getenv("DEBUG"))
