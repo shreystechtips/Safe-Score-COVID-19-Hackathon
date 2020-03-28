@@ -10,6 +10,7 @@ import csv
 import pandas as pd
 from geopy.geocoders import Nominatim
 
+# NOTE: GIT DATA BEFORE 03-22-2020 IS BAD. THE FORMAT DOES NOT MATCH OUT CODE
 load_dotenv()
 
 app = flask.Flask(__name__)
@@ -17,28 +18,53 @@ app.Debug = os.getenv("DEBUG")
 CORS(app)
 
 STATE_DATA = None
+PREV_DATA = None
+POP_DATA = None
 geolocator = Nominatim(user_agent="main")
+
 
 @app.route('/', methods=['GET'])
 def main():
     message = ''
     return render_template('index.html', message=message)
 
-def get_stats_loc(lat,lng):
-     location = geolocator.reverse(str(lat)+", "+str(lng))
-     raw_state = location.raw['address']['state']
-     raw_county = location.raw['address']['county']
-     raw_county = raw_county[:raw_county.index(" County")]
-     print(lat,',',lng,':',STATE_DATA[raw_state][raw_county])
+
+def get_stats_loc(lat, lng):
+    location = geolocator.reverse(str(lat)+", "+str(lng))
+    raw_state = location.raw['address']['state']
+    raw_county = location.raw['address']['county']
+    print(lat, ',', lng, ':', STATE_DATA[raw_state]
+          [raw_county[:raw_county.index(" County")]])
+    print(POP_DATA[raw_state][raw_county])
+    covid = STATE_DATA[raw_state][raw_county[:raw_county.index(" County")]]
+    covid_old = PREV_DATA[raw_state][raw_county[:raw_county.index(" County")]]
+    pop = POP_DATA[raw_state][raw_county]
+    ret = {}
+    ret['County'] = raw_county
+    ret['Population'] = int(pop['Population'])
+    ret['PopDensity'] = float(
+        pop['Density per square mile of land area - Population'])
+    ret['LandArea'] = float(pop['Area in square miles - Land area'])
+    ret['State'] = raw_state
+    ret['CountyCoords'] = {'lat': covid['Lat'], 'lng': covid['Long_']}
+    ret['Infected'] = covid['Confirmed']
+    ret['Infected_Rate_Growth'] = covid['Confirmed']/covid_old['Confirmed']
+    ret['Deaths'] = covid['Deaths']
+    ret['Death_Rate_Growth'] = covid['Deaths']/covid_old['Deaths']
+    ret['Growth_Index'] = covid['Confirmed']/covid_old['Confirmed'] * \
+        ret['Infected']/ret['Population'] * covid['Deaths']/covid_old['Deaths']
+    return ret
 
 
 # if __name__ == '__main__':
 #     app.run(debug=os.getenv("DEBUG"))
 
 STATE_DATA_URL = "https://covidtracking.com/api/states/daily"
-remove = ['dateChecked','pending','total']
-def get_state_data(date, data = None):
-    date =int(date.strftime("%Y%m%d"))
+remove = ['dateChecked', 'pending', 'total']
+
+
+def get_state_data(date, data=None):
+    date = int(date.strftime("%Y%m%d"))
     if not data:
         data = requests.get(STATE_DATA_URL).json()
     ret = [x for x in data if (x["date"] == date)]
@@ -48,25 +74,50 @@ def get_state_data(date, data = None):
                 x.pop(y)
     return ret
 
+
 CITY_DATA_BASE_URL = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/"
-def get_county_data(date, data = None):
+
+
+def get_county_data(date, data=None):
     url = CITY_DATA_BASE_URL+date.strftime("%m-%d-%Y.csv")
-    data = requests.get(url).content.decode('utf-8')
-    write = open('temp.csv','w')
-    write.write(data)
+    data = requests.get(url).content.decode('utf-8')[1:]
+    FILE_NAME = date.strftime('%d%m%Y')+'.csv'
+    write = open(FILE_NAME, 'w+')
+    try:
+        write.write(data)
+    except:
+        print(data)
     write.close()
-    cols = ['Admin2','Province_State','Country_Region','Last_Update','Lat','Long_','Confirmed','Deaths']
+    cols = ['Admin2', 'Province_State', 'Country_Region',
+            'Last_Update', 'Lat', 'Long_', 'Confirmed', 'Deaths']
     # removed_cols: (['FIPS','Recovered','Active','Combined_Key'])
-    f = open('temp.csv','r+')
-    data = pd.read_csv(f, usecols = cols,)#parse_dates = ["Last_Update"]
-    # data.rename(columns = {'Admin2':'City'}, inplace = True) 
+    f = open(FILE_NAME, 'r+')
+    data = pd.read_csv(f, usecols=cols,)  # parse_dates = ["Last_Update"]
+    # data.rename(columns = {'Admin2':'City'}, inplace = True)
     return data[data['Country_Region'].str.contains('US')].to_dict("index")
 
+
+POP_FILE = './RawData/Census Population Density by County.csv'
+
+
+def get_pop_data():
+    cols = ['Geographic area', 'Geographic area.1', 'Population', 'Housing units',
+            'Area in square miles - Land area', 'Density per square mile of land area - Population']
+    data = pd.read_csv(open(POP_FILE, 'r'), skiprows=1, usecols=cols)
+    data = data[data['Geographic area.1'].str.contains(' County')]
+    total_data = {}
+    for index, col in data.iterrows():
+        state = col['Geographic area'].split(' - ')[1]
+        county = col['Geographic area.1']
+        if not state in total_data:
+            total_data[state] = {}
+        total_data[state][county] = col.to_dict()
+    return total_data
 
 
 def aggregate_city_states(date):
     city = get_county_data(date)
-    state = get_state_data(date)
+    # state = get_state_data(date)
     total_data = {}
     for y in city:
         y = city[y]
@@ -77,6 +128,10 @@ def aggregate_city_states(date):
     total = {}
     return total_data
 
-STATE_DATA =  aggregate_city_states(datetime(2020,3,26))
-#get_stats_loc(,)
 
+POP_DATA = get_pop_data()
+# open('pop_data.json','w').write(json.dumps(POP_DATA))
+date = datetime(2020, 3, 27)
+STATE_DATA = aggregate_city_states(date)
+PREV_DATA = aggregate_city_states(date-timedelta(days=5))
+# print(get_stats_loc())
