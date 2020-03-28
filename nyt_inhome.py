@@ -19,8 +19,8 @@ def scrape():
             json_object = json.loads(x.text[x.text.index(
                 lookup)+len(lookup):x.text.index('NYTG.watch(')])  # this is the json object
 
-            open('tt.json', 'w').write(
-                x.text[x.text.index(lookup)+len(lookup):x.text.index('NYTG.watch(')])
+            # open('tt.json', 'w').write(
+            #     x.text[x.text.index(lookup)+len(lookup):x.text.index('NYTG.watch(')])
 
     # clean up json_object
     for state_entry in json_object:
