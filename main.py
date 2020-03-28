@@ -20,7 +20,8 @@ CORS(app)
 STATE_DATA = None
 PREV_DATA = None
 POP_DATA = None
-geolocator = Nominatim(user_agent="main")
+MASTER_DATE = None
+geolocator = Nominatim(user_agent=__name__)
 
 
 @app.route('/', methods=['GET'])
@@ -29,13 +30,38 @@ def main():
     return render_template('index.html', message=message)
 
 
-def get_stats_loc(lat, lng):
+def set_data(date):
+    return aggregate_city_states(MASTER_DATE), aggregate_city_states(MASTER_DATE-timedelta(days=5))
+
+
+def get_latest_data_date():
+    date = datetime.now()
+    url = CITY_DATA_BASE_URL + date.strftime("%m-%d-%Y.csv")
+    response = requests.head(url)
+    if response.status_code == 404:
+        return date-timedelta(days=1)
+    else:
+        return date
+
+# NOTE: to pass in lat/lng pass in lat= and lng= FLOAT params with ? after url
+@app.route('/location/stats', methods=['GET'])
+def get_stats_loc(lat=0, lng=0, stringify=True, MASTER_DATE=MASTER_DATE):
+    if not MASTER_DATE:
+        MASTER_DATE = get_latest_data_date()
+        set_data(MASTER_DATE)
+    elif (datetime.now() - MASTER_DATE) > timedelta(days=1):
+        MASTER_DATE = get_latest_data_date()
+        set_data(MASTER_DATE)
+
+    if stringify:
+        lat = float(request.args.get('lat'))
+        lng = float(request.args.get('lng'))
     location = geolocator.reverse(str(lat)+", "+str(lng))
     raw_state = location.raw['address']['state']
     raw_county = location.raw['address']['county']
-    print(lat, ',', lng, ':', STATE_DATA[raw_state]
-          [raw_county[:raw_county.index(" County")]])
-    print(POP_DATA[raw_state][raw_county])
+    # print(lat, ',', lng, ':', STATE_DATA[raw_state]
+    #       [raw_county[:raw_county.index(" County")]])
+    # print(POP_DATA[raw_state][raw_county])
     covid = STATE_DATA[raw_state][raw_county[:raw_county.index(" County")]]
     covid_old = PREV_DATA[raw_state][raw_county[:raw_county.index(" County")]]
     pop = POP_DATA[raw_state][raw_county]
@@ -53,11 +79,10 @@ def get_stats_loc(lat, lng):
     ret['Death_Rate_Growth'] = covid['Deaths']/covid_old['Deaths']
     ret['Growth_Index'] = covid['Confirmed']/covid_old['Confirmed'] * \
         ret['Infected']/ret['Population'] * covid['Deaths']/covid_old['Deaths']
-    return ret
+    if not stringify:
+        return ret
+    return jsonify(ret), 200
 
-
-# if __name__ == '__main__':
-#     app.run(debug=os.getenv("DEBUG"))
 
 STATE_DATA_URL = "https://covidtracking.com/api/states/daily"
 remove = ['dateChecked', 'pending', 'total']
@@ -81,12 +106,14 @@ CITY_DATA_BASE_URL = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/
 def get_county_data(date, data=None):
     url = CITY_DATA_BASE_URL+date.strftime("%m-%d-%Y.csv")
     data = requests.get(url).content.decode('utf-8')[1:]
-    FILE_NAME = date.strftime('%d%m%Y')+'.csv'
+    if not os.path.isdir('generated_data'):
+        os.makedirs('generated_data')
+    FILE_NAME = './generated_data/'+date.strftime('%d%m%Y')+'.csv'
     write = open(FILE_NAME, 'w+')
     try:
         write.write(data)
     except:
-        print(data)
+        pass
     write.close()
     cols = ['Admin2', 'Province_State', 'Country_Region',
             'Last_Update', 'Lat', 'Long_', 'Confirmed', 'Deaths']
@@ -103,7 +130,7 @@ POP_FILE = './RawData/Census Population Density by County.csv'
 def get_pop_data():
     cols = ['Geographic area', 'Geographic area.1', 'Population', 'Housing units',
             'Area in square miles - Land area', 'Density per square mile of land area - Population']
-    data = pd.read_csv(open(POP_FILE, 'r'), skiprows=1, usecols=cols)
+    data = pd.read_csv(open(POP_FILE, 'r', encoding='ISO-8859-1'), skiprows=1, usecols=cols)
     data = data[data['Geographic area.1'].str.contains(' County')]
     total_data = {}
     for index, col in data.iterrows():
@@ -131,7 +158,8 @@ def aggregate_city_states(date):
 
 POP_DATA = get_pop_data()
 # open('pop_data.json','w').write(json.dumps(POP_DATA))
-date = datetime(2020, 3, 27)
-STATE_DATA = aggregate_city_states(date)
-PREV_DATA = aggregate_city_states(date-timedelta(days=5))
-# print(get_stats_loc())
+MASTER_DATE = get_latest_data_date()
+STATE_DATA, PREV_DATA = set_data(MASTER_DATE)
+
+if __name__ == '__main__':
+    app.run(debug=os.getenv("DEBUG"))
