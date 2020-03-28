@@ -130,7 +130,7 @@ POP_FILE = './RawData/Census Population Density by County.csv'
 def get_pop_data():
     cols = ['Geographic area', 'Geographic area.1', 'Population', 'Housing units',
             'Area in square miles - Land area', 'Density per square mile of land area - Population']
-    data = pd.read_csv(open(POP_FILE, 'r'), skiprows=1, usecols=cols)
+    data = pd.read_csv(open(POP_FILE, 'r', encoding='ISO-8859-1'), skiprows=1, usecols=cols)
     data = data[data['Geographic area.1'].str.contains(' County')]
     total_data = {}
     for index, col in data.iterrows():
