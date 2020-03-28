@@ -21,7 +21,7 @@ STATE_DATA = None
 PREV_DATA = None
 POP_DATA = None
 MASTER_DATE = None
-geolocator = Nominatim(user_agent="main")
+geolocator = Nominatim(user_agent=__name__)
 
 
 @app.route('/', methods=['GET'])
