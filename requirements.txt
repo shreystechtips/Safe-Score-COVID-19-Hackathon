@@ -9,10 +9,12 @@ colorama==0.4.3
 decorator==4.4.2
 Flask==1.1.1
 Flask-Cors==3.0.8
+foreman==0.9.7
 future==0.18.2
 geocoder==1.38.1
 geographiclib==1.50
 geopy==1.21.0
+gunicorn==20.0.4
 idna==2.9
 isort==4.3.21
 itsdangerous==1.1.0
@@ -29,6 +31,7 @@ python-dotenv==0.12.0
 pytz==2019.3
 ratelim==0.1.6
 requests==2.23.0
+requests-futures==1.0.0
 six==1.14.0
 soupsieve==2.0
 urllib3==1.25.8
