@@ -111,20 +111,20 @@ def get_stats_loc(lat=0, lng=0, stringify=True, MASTER_DATE=MASTER_DATE):
     ret = {}
     ret['County'] = raw_county
     ret['Population'] = int(pop['Population'])
-    ret['Pop_Density'] = float(
+    ret['Population Density'] = float(
         pop['Density per square mile of land area - Population'])
-    ret['Land_Area'] = float(pop['Area in square miles - Land area'])
+    ret['Land Area'] = float(pop['Area in square miles - Land area'])
     ret['State'] = raw_state
     ret['County_Coords'] = {'lat': covid['Lat'], 'lng': covid['Long_']}
-    ret['Infected'] = covid['Confirmed']
-    ret['Infected_Rate_Growth'] = calculate_divide(
+    ret['Active Cases'] = covid['Confirmed']
+    ret['Infected Rate Growth'] = calculate_divide(
         covid['Confirmed'], covid_old['Confirmed'])
     ret['Deaths'] = covid['Deaths']
-    ret['Death_Rate_Growth'] = calculate_divide(covid['Deaths'], covid_old['Deaths'])
-    ret['Growth_Index'] = calculate_divide(covid['Confirmed'], covid_old['Confirmed']) * calculate_divide(
-        ret['Infected'], ret['Population']) * calculate_divide(covid['Deaths'], covid_old['Deaths'])
-    ret['Stay_Home'] = at_home(location)
-    ret['Old_Pop'] = get_age_pop_for_county(
+    ret['Death Rate Growth'] = calculate_divide(covid['Deaths'], covid_old['Deaths'])
+    ret['Growth Index'] = calculate_divide(covid['Confirmed'], covid_old['Confirmed']) * calculate_divide(
+        ret['Active Cases'], ret['Population']) * calculate_divide(covid['Deaths'], covid_old['Deaths'])
+    ret['Stay Home'] = at_home(location)
+    ret['High Risk Population'] = get_age_pop_for_county(
         raw_state, raw_county, POP_AGE_DATA)
     if not stringify:
         return ret
@@ -219,7 +219,7 @@ def aggregate_city_states(date):
             if not y['Province_State'] in total_data:
                 total_data[y['Province_State']] = {}
             total_data[y['Province_State']][y['Admin2']] = y
-            #total_data[y['Province_State']][y['Admin2']]['Old_Pop'] = get_age_pop_for_county(y['Province_State'],y['Admin2'],pop_age_data)
+            #total_data[y['Province_State']][y['Admin2']]['High Risk Population'] = get_age_pop_for_county(y['Province_State'],y['Admin2'],pop_age_data)
     total = {}
     return total_data
 
