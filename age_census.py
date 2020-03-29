@@ -24,7 +24,7 @@ def population_data(file=LOCAL_FILENAME):
     if not os.path.isfile(file):
         download_file()
     columns = ['STNAME', 'CTYNAME', 'YEAR', 'AGEGRP', 'TOT_POP']
-    data = pd.read_csv(open(file, 'r'), usecols=columns)
+    data = pd.read_csv(open(file, 'r', encoding='ISO-8859-1'), usecols=columns)
     data = data[data.YEAR == 11]
     data = data[data.AGEGRP >= 14]
     data = data.groupby(['STNAME', 'CTYNAME'])['TOT_POP'].sum().reset_index()
