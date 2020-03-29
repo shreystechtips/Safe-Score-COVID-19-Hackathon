@@ -120,7 +120,8 @@ def get_stats_loc(lat=0, lng=0, stringify=True, MASTER_DATE=MASTER_DATE):
     ret['Infected Rate Growth'] = calculate_divide(
         covid['Confirmed'], covid_old['Confirmed'])
     ret['Deaths'] = covid['Deaths']
-    ret['Death Rate Growth'] = calculate_divide(covid['Deaths'], covid_old['Deaths'])
+    ret['Death Rate Growth'] = calculate_divide(
+        covid['Deaths'], covid_old['Deaths'])
     ret['Growth Index'] = calculate_divide(covid['Confirmed'], covid_old['Confirmed']) * calculate_divide(
         ret['Active Cases'], ret['Population']) * calculate_divide(covid['Deaths'], covid_old['Deaths'])
     ret['Stay Home'] = at_home(location)
