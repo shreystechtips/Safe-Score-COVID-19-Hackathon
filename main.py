@@ -117,12 +117,12 @@ def get_stats_loc(lat=0, lng=0, stringify=True, MASTER_DATE=MASTER_DATE):
     ret['State'] = raw_state
     ret['County_Coords'] = {'lat': covid['Lat'], 'lng': covid['Long_']}
     ret['Infected'] = covid['Confirmed']
-    ret['Infected_Rate_Growth'] = np.divide(
+    ret['Infected_Rate_Growth'] = calculate_divide(
         covid['Confirmed'], covid_old['Confirmed'])
     ret['Deaths'] = covid['Deaths']
-    ret['Death_Rate_Growth'] = np.divide(covid['Deaths'], covid_old['Deaths'])
-    ret['Growth_Index'] = np.divide(covid['Confirmed'], covid_old['Confirmed']) * np.divide(
-        ret['Infected'], ret['Population']) * np.divide(covid['Deaths'], covid_old['Deaths'])
+    ret['Death_Rate_Growth'] = calculate_divide(covid['Deaths'], covid_old['Deaths'])
+    ret['Growth_Index'] = calculate_divide(covid['Confirmed'], covid_old['Confirmed']) * calculate_divide(
+        ret['Infected'], ret['Population']) * calculate_divide(covid['Deaths'], covid_old['Deaths'])
     ret['Stay_Home'] = at_home(location)
     ret['Old_Pop'] = get_age_pop_for_county(
         raw_state, raw_county, POP_AGE_DATA)
@@ -131,7 +131,9 @@ def get_stats_loc(lat=0, lng=0, stringify=True, MASTER_DATE=MASTER_DATE):
     return jsonify(ret), 200
 
 
-# def calculate_value()
+def calculate_divide(val1, val2):
+    val2 = 1 if val2 == 0 else val2
+    return val1/val2
 
 
 STATE_DATA_URL = "https://covidtracking.com/api/states/daily"
