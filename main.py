@@ -195,11 +195,12 @@ def get_pop_data():
 
 def get_age_pop_for_county(state, county, data):
     data = data[data["STNAME"].str.contains(state)]
+    print(data,state,county)
     for i, row in data.iterrows():
         if county in row['CTYNAME']:
             # print(row['TOT_POP'], county)
             return row['TOT_POP']
-    return 0
+    return -1
 
 
 def aggregate_city_states(date):
