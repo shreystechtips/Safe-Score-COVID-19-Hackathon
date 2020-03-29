@@ -9,8 +9,11 @@ import json
 import csv
 import pandas as pd
 from geopy.geocoders import Nominatim
-import nyt_inhome
 import numpy as np
+
+import age_census
+import nyt_inhome
+
 np.seterr(divide='ignore')
 
 # NOTE: GIT DATA BEFORE 03-22-2020 IS BAD. THE FORMAT DOES NOT MATCH OUT CODE
@@ -24,6 +27,8 @@ STATE_DATA = None
 PREV_DATA = None
 INHOME_ORDERS = None
 POP_DATA = None
+POP_AGE_DATA = None
+
 MASTER_DATE = None
 geolocator = Nominatim(user_agent=__name__)
 
@@ -119,6 +124,8 @@ def get_stats_loc(lat=0, lng=0, stringify=True, MASTER_DATE=MASTER_DATE):
     ret['Growth_Index'] = np.divide(covid['Confirmed'], covid_old['Confirmed']) * np.divide(
         ret['Infected'], ret['Population']) * np.divide(covid['Deaths'], covid_old['Deaths'])
     ret['Stay_Home'] = at_home(location)
+    ret['Old_Pop'] = get_age_pop_for_county(
+        raw_state, raw_county, POP_AGE_DATA)
     if not stringify:
         return ret
     return jsonify(ret), 200
@@ -186,9 +193,22 @@ def get_pop_data():
     return total_data
 
 
+def get_age_pop_for_county(state, county, data):
+    data = data[data["STNAME"].str.contains(state)]
+    for i, row in data.iterrows():
+        if county in row['CTYNAME']:
+            # print(row['TOT_POP'], county)
+            return row['TOT_POP']
+    return 0
+
+
 def aggregate_city_states(date):
     city = get_county_data(date)
-    # state = get_state_data(date)
+    # state = get_state_data(date)\
+    # for thing in pop_age_data:
+    #     print(thing)
+    # fix = pop_age_data[~(pop_age_data['CTYNAME'].str.contains("County"))]
+
     total_data = {}
     for y in city:
         y = city[y]
@@ -196,11 +216,13 @@ def aggregate_city_states(date):
             if not y['Province_State'] in total_data:
                 total_data[y['Province_State']] = {}
             total_data[y['Province_State']][y['Admin2']] = y
+            #total_data[y['Province_State']][y['Admin2']]['Old_Pop'] = get_age_pop_for_county(y['Province_State'],y['Admin2'],pop_age_data)
     total = {}
     return total_data
 
 
 POP_DATA = get_pop_data()
+POP_AGE_DATA = age_census.population_data()
 # open('pop_data.json','w').write(json.dumps(POP_DATA))
 MASTER_DATE = get_latest_data_date()
 set_data(MASTER_DATE)
