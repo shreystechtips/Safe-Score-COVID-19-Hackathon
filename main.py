@@ -111,11 +111,11 @@ def get_stats_loc(lat=0, lng=0, stringify=True, MASTER_DATE=MASTER_DATE):
     ret = {}
     ret['County'] = raw_county
     ret['Population'] = int(pop['Population'])
-    ret['PopDensity'] = float(
+    ret['Pop_Density'] = float(
         pop['Density per square mile of land area - Population'])
-    ret['LandArea'] = float(pop['Area in square miles - Land area'])
+    ret['Land_Area'] = float(pop['Area in square miles - Land area'])
     ret['State'] = raw_state
-    ret['CountyCoords'] = {'lat': covid['Lat'], 'lng': covid['Long_']}
+    ret['County_Coords'] = {'lat': covid['Lat'], 'lng': covid['Long_']}
     ret['Infected'] = covid['Confirmed']
     ret['Infected_Rate_Growth'] = np.divide(
         covid['Confirmed'], covid_old['Confirmed'])
