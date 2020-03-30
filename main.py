@@ -10,6 +10,7 @@ import csv
 import pandas as pd
 from geopy.geocoders import Nominatim
 import numpy as np
+import math
 
 import age_census
 import nyt_inhome
@@ -122,14 +123,28 @@ def get_stats_loc(lat=0, lng=0, stringify=True, MASTER_DATE=MASTER_DATE):
     ret['Deaths'] = covid['Deaths']
     ret['Death Rate Growth'] = calculate_divide(
         covid['Deaths'], covid_old['Deaths'])
-    ret['Growth Index'] = calculate_divide(covid['Confirmed'], covid_old['Confirmed']) * calculate_divide(
-        ret['Active Cases'], ret['Population']) * calculate_divide(covid['Deaths'], covid_old['Deaths'])
     ret['Stay Home'] = at_home(location)
     ret['High Risk Population'] = get_age_pop_for_county(
         raw_state, raw_county, POP_AGE_DATA)
+    if(ret['High Risk Population'] <= 0):
+        print('rip')
+    set_growth_index(ret)
     if not stringify:
         return ret
     return jsonify(ret), 200
+
+
+def set_growth_index(ret):
+    x = ret['Active Cases']*ret['Population Density']*ret['Infected Rate Growth'] * \
+        ret['Death Rate Growth']*ret['Deaths'] * \
+        ret['High Risk Population']/ret['Population']/1000000
+    i_term = 0.5
+    k_term = 100
+    r_term = 0.1
+    e_calc = math.pow(math.e, r_term*x)
+    val_numerator = i_term*k_term*e_calc
+    val_denom = k_term - i_term + i_term*e_calc
+    ret['Growth Index'] = math.ceil(val_numerator/val_denom)
 
 
 def calculate_divide(val1, val2):
@@ -199,10 +214,13 @@ def get_pop_data():
 def get_age_pop_for_county(state, county, data):
     data = data[data["STNAME"].str.contains(state)]
     # print(data,state,county)
+    if "County".lower() in county.lower():
+        county = county[:county.lower().index("county")]
     for i, row in data.iterrows():
         if county in row['CTYNAME']:
             # print(row['TOT_POP'], county)
             return row['TOT_POP']
+    print(county)
     return -1
 
 
