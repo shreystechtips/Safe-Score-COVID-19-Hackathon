@@ -67,14 +67,14 @@ def at_home(geopy_obj):
             if 'statewide' in order and order['statewide']:
                 return True
             if 'cities' in order:
-                city = next((x for x in order['cities'] if x['place_fmt']
-                             == geopy_obj['address']['city']), None)
-                if city:
+                city = [x for x in order['cities'] if x['place_fmt']
+                        == geopy_obj.raw['address']['city']]
+                if len(city) > 0:
                     return True
             if 'county_data' in order:
-                county = next((x for x in order['county_data']
-                               if x['place_fmt'] == geopy_obj.raw['address']['county']), None)
-                if county:
+                county = [x for x in order['county_data']
+                          if x['place_fmt'] == geopy_obj.raw['address']['county']]
+                if len(county) > 0:
                     return True
     return False
 
@@ -168,18 +168,39 @@ def set_growth_index(ret):
         ret['Death Rate Growth']*normalize_calc_value(ret['Deaths']) * \
         ret['High Risk Population'] / \
         ret['Population']/int(os.getenv("DIVIDE_X"))
-    i_term = 0.5
+    i_term = 0.17
     k_term = 100
     r_term = 0.1
+    c_term = 42
     try:
+        x = x + c_term
+        print(x)
         e_calc = math.pow(math.e, r_term*x)
+        print(e_calc)
         val_numerator = i_term*k_term*e_calc
-        val_denom = k_term - i_term + i_term*e_calc
+        print(val_numerator)
+        val_denom = (k_term - i_term) + i_term*e_calc
+        print(val_denom)
         ret['Safe Score'] = math.ceil(val_numerator/val_denom)
-    except OverflowError as error:
+        print('hi', ret['Safe Score'])
+    except:
         ret['Safe Score'] = 100
+
+    # try:
+    #     g_term = 470
+    #     k_term = 100
+    #     x_shift = -1*g_term/k_term
+    #     frac_calc = -1* g_term* (x-x_shift) + k_term
+    #     if frac_calc <= 0:
+    #         frac_calc = 100
+    #     print(frac_calc)
+    #     ret['Safe Score 2'] = frac_calc
+    # except:
+    #     ret['Safe Score 2'] = 100
+
     print(ret['Safe Score'])
     ret['Safe Score'] = 100 - ret['Safe Score']
+    # ret['Safe Score 2'] = 100 - ret['Safe Score 2']
 
 
 def calculate_divide(val1, val2):
