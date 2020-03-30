@@ -98,6 +98,7 @@ def get_loc_json(location):
     # print(POP_DATA[raw_state][raw_county])s
     # print(STATE_DATA[raw_state])
     # print(raw_county)
+    short_county = raw_county
     if "County" in raw_county:
         short_county = raw_county[:raw_county.index(" County")]
     if "City" in short_county:
