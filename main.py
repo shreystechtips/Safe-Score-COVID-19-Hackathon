@@ -131,7 +131,6 @@ def get_loc_json(location):
         ret['High Risk Population'] = get_age_pop_for_county(
             raw_state, short_county, POP_AGE_DATA)
     set_growth_index(ret)
-    ret['Safe Score'] = 100 - ret['Safe Score']
     return ret
 
 
@@ -179,6 +178,8 @@ def set_growth_index(ret):
         ret['Safe Score'] = math.ceil(val_numerator/val_denom)
     except OverflowError as error:
         ret['Safe Score'] = 100
+    print(ret['Safe Score'])
+    ret['Safe Score'] = 100 - ret['Safe Score']
 
 
 def calculate_divide(val1, val2):
