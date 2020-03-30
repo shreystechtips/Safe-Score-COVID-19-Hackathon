@@ -78,9 +78,9 @@ def at_home(geopy_obj):
                     return True
     return False
 
-# NOTE: to pass in lat/lng pass in lat= and lng= FLOAT params with ? after url
-@app.route('/location/stats', methods=['GET'])
-def get_stats_loc(lat=0, lng=0, stringify=True, MASTER_DATE=MASTER_DATE):
+
+def get_loc_json(location):
+    global MASTER_DATE
     if STATE_DATA == None:
         MASTER_DATE = get_latest_data_date()
         set_data(MASTER_DATE)
@@ -91,10 +91,6 @@ def get_stats_loc(lat=0, lng=0, stringify=True, MASTER_DATE=MASTER_DATE):
         MASTER_DATE = get_latest_data_date()
         set_data(MASTER_DATE)
 
-    if stringify:
-        lat = float(request.args.get('lat'))
-        lng = float(request.args.get('lng'))
-    location = geolocator.reverse(str(lat)+", "+str(lng))
     raw_state = location.raw['address']['state']
     raw_county = location.raw['address']['county']
     # print(lat, ',', lng, ':', STATE_DATA[raw_state]
@@ -129,6 +125,29 @@ def get_stats_loc(lat=0, lng=0, stringify=True, MASTER_DATE=MASTER_DATE):
     if(ret['High Risk Population'] <= 0):
         print('rip')
     set_growth_index(ret)
+    return ret
+
+
+@app.route('/reverse/stats', methods=['GET'])
+def get_stats_reverse(loc="", MASTER_DATE=MASTER_DATE, stringify=True):
+    if stringify:
+        loc = request.args.get("loc")
+    location = geolocator.geocode(loc)
+    ret = get_loc_json(geolocator.reverse(
+        str(location.raw['lat'])+', '+str(location.raw['lon'])))
+    if not stringify:
+        return ret
+    return jsonify(ret), 200
+
+
+# NOTE: to pass in lat/lng pass in lat= and lng= FLOAT params with ? after url
+@app.route('/location/stats', methods=['GET'])
+def get_stats_loc(lat=0, lng=0, stringify=True, MASTER_DATE=MASTER_DATE):
+    if stringify:
+        lat = float(request.args.get('lat'))
+        lng = float(request.args.get('lng'))
+    location = geolocator.reverse(str(lat)+", "+str(lng))
+    ret = get_loc_json(location)
     if not stringify:
         return ret
     return jsonify(ret), 200
