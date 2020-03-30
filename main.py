@@ -131,6 +131,7 @@ def get_loc_json(location):
         ret['High Risk Population'] = get_age_pop_for_county(
             raw_state, short_county, POP_AGE_DATA)
     set_growth_index(ret)
+    ret['Safe Score'] = 100 - ret['Safe Score']
     return ret
 
 
