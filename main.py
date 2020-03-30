@@ -134,10 +134,15 @@ def get_stats_loc(lat=0, lng=0, stringify=True, MASTER_DATE=MASTER_DATE):
     return jsonify(ret), 200
 
 
+def normalize_calc_value(value):
+    return (1 if value == 0 else value)
+
+
 def set_growth_index(ret):
-    x = ret['Active Cases']*ret['Population Density']*ret['Infected Rate Growth'] * \
-        ret['Death Rate Growth']*ret['Deaths'] * \
-        ret['High Risk Population']/ret['Population']/1000000
+    x = normalize_calc_value(ret['Active Cases'])*normalize_calc_value(ret['Population Density'])*ret['Infected Rate Growth'] * \
+        ret['Death Rate Growth']*normalize_calc_value(ret['Deaths']) * \
+        ret['High Risk Population'] / \
+        ret['Population']/int(os.getenv("DIVIDE_X"))
     i_term = 0.5
     k_term = 100
     r_term = 0.1
