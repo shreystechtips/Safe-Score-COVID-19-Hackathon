@@ -144,7 +144,7 @@ def set_growth_index(ret):
     e_calc = math.pow(math.e, r_term*x)
     val_numerator = i_term*k_term*e_calc
     val_denom = k_term - i_term + i_term*e_calc
-    ret['Growth Index'] = math.ceil(val_numerator/val_denom)
+    ret['Safe Score'] = math.ceil(val_numerator/val_denom)
 
 
 def calculate_divide(val1, val2):
