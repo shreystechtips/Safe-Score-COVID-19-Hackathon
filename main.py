@@ -99,12 +99,15 @@ def get_loc_json(location):
     # print(STATE_DATA[raw_state])
     # print(raw_county)
     short_county = raw_county[:raw_county.index(" County")]
+    if "City" in short_county:
+        short_county = raw_county[:raw_county.index(" City")]
     covid = STATE_DATA[raw_state][next(
-        (x for x in STATE_DATA[raw_state] if short_county in x))]
+        x for x in STATE_DATA[raw_state] if short_county in x)]
     covid_old = PREV_DATA[raw_state][next(
         (x for x in PREV_DATA[raw_state] if short_county in x))]
 
-    pop = POP_DATA[raw_state][raw_county]
+    pop = POP_DATA[raw_state][next(
+        x for x in POP_DATA[raw_state] if short_county in x)]
     ret = {}
     ret['County'] = raw_county
     ret['Population'] = int(pop['Population'])
@@ -123,7 +126,8 @@ def get_loc_json(location):
     ret['High Risk Population'] = get_age_pop_for_county(
         raw_state, raw_county, POP_AGE_DATA)
     if(ret['High Risk Population'] <= 0):
-        print('rip')
+        ret['High Risk Population'] = get_age_pop_for_county(
+            raw_state, short_county, POP_AGE_DATA)
     set_growth_index(ret)
     return ret
 
@@ -165,10 +169,13 @@ def set_growth_index(ret):
     i_term = 0.5
     k_term = 100
     r_term = 0.1
-    e_calc = math.pow(math.e, r_term*x)
-    val_numerator = i_term*k_term*e_calc
-    val_denom = k_term - i_term + i_term*e_calc
-    ret['Safe Score'] = math.ceil(val_numerator/val_denom)
+    try:
+        e_calc = math.pow(math.e, r_term*x)
+        val_numerator = i_term*k_term*e_calc
+        val_denom = k_term - i_term + i_term*e_calc
+        ret['Safe Score'] = math.ceil(val_numerator/val_denom)
+    except OverflowError as error:
+        ret['Safe Score'] = 100
 
 
 def calculate_divide(val1, val2):
@@ -244,7 +251,6 @@ def get_age_pop_for_county(state, county, data):
         if county in row['CTYNAME']:
             # print(row['TOT_POP'], county)
             return row['TOT_POP']
-    print(county)
     return -1
 
 
