@@ -29,6 +29,8 @@ PREV_DATA = None
 INHOME_ORDERS = None
 POP_DATA = None
 POP_AGE_DATA = None
+POP_MINMAX = [0, 0]
+POP_DENSITY_MINMAX = [0, 0]
 
 MASTER_DATE = None
 geolocator = Nominatim(user_agent=__name__)
@@ -134,11 +136,11 @@ def get_loc_json(location):
     ret['State'] = raw_state
     ret['County_Coords'] = {'lat': covid['Lat'], 'lng': covid['Long_']}
     ret['Active Cases'] = covid['Confirmed']
-    ret['Infected Rate Growth'] = calculate_divide(
-        covid['Confirmed'], covid_old['Confirmed'])
+    ret['Infected Rate Growth'] = round(calculate_divide(
+        covid['Confirmed'], covid_old['Confirmed']), 2)
     ret['Deaths'] = covid['Deaths']
-    ret['Death Rate Growth'] = calculate_divide(
-        covid['Deaths'], covid_old['Deaths'])
+    ret['Death Rate Growth'] = round(calculate_divide(
+        covid['Deaths'], covid_old['Deaths']), 2)
     ret['Stay Home'] = at_home(location)
     ret['High Risk Population'] = get_age_pop_for_county(
         raw_state, raw_county, POP_AGE_DATA)
@@ -180,10 +182,15 @@ def normalize_calc_value(value):
     return (1 if value == 0 else value)
 
 
+def get_clamped_pop(pop):
+
+    return pop
+
+
 def set_growth_index(ret):
     x = normalize_calc_value(ret['Active Cases'])*normalize_calc_value(ret['Population Density'])*ret['Infected Rate Growth'] * \
         ret['Death Rate Growth']*normalize_calc_value(
-            ret['Deaths']) * ret['High Risk Population'] / ret['Population']/int(os.getenv("DIVIDE_X"))
+            ret['Deaths']) * ret['High Risk Population'] / get_clamped_pop(ret['Population'])/int(os.getenv("DIVIDE_X"))
     i_term = 0.17
     k_term = 100
     r_term = 0.1
@@ -267,6 +274,16 @@ def get_county_data(date, data=None):
 POP_FILE = './RawData/Census Population Density by County.csv'
 
 
+def clamp_pop_vals(data):
+    global POP_MINMAX
+    global POP_DENSITY_MINMAX
+    print(data['Population'])
+    print(data['Density per square mile of land area - Population'].max())
+    POP_MINMAX = [data['Population'].min(), data['Population'].max()]
+    POP_DENSITY_MINMAX = [data['Density per square mile of land area - Population'].min(
+    ), data['Density per square mile of land area - Population'].max()]
+
+
 def get_pop_data():
     cols = ['Geographic area', 'Geographic area.1', 'Population', 'Housing units',
             'Area in square miles - Land area', 'Density per square mile of land area - Population']
@@ -274,6 +291,7 @@ def get_pop_data():
         open(POP_FILE, 'r', encoding='ISO-8859-1'), skiprows=1, usecols=cols)
     data = data[data['Geographic area.1'].str.contains(' County')]
     total_data = {}
+    clamp_pop_vals(data)
     for index, col in data.iterrows():
         state = col['Geographic area'].split(' - ')[1]
         county = col['Geographic area.1']
