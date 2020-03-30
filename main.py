@@ -79,6 +79,21 @@ def at_home(geopy_obj):
     return False
 
 
+def get_pop(population):
+    longest_int = 0
+    try:
+        longest_int = int(str(population))
+        return longest_int
+    except:
+        pass
+    for i in range(1, len(population)):
+        try:
+            longest_int = int(population[:i])
+        except:
+            print(longest_int, 'hello')
+            return longest_int
+
+
 def get_loc_json(location):
     global MASTER_DATE
     if STATE_DATA == None:
@@ -112,7 +127,7 @@ def get_loc_json(location):
         x for x in POP_DATA[raw_state] if short_county in x)]
     ret = {}
     ret['County'] = raw_county
-    ret['Population'] = int(pop['Population'])
+    ret['Population'] = get_pop(pop['Population'])
     ret['Population Density'] = float(
         pop['Density per square mile of land area - Population'])
     ret['Land Area'] = float(pop['Area in square miles - Land area'])
@@ -130,6 +145,8 @@ def get_loc_json(location):
     if(ret['High Risk Population'] <= 0):
         ret['High Risk Population'] = get_age_pop_for_county(
             raw_state, short_county, POP_AGE_DATA)
+    if not ret["Population"]:
+        ret["Population"] = get_pop(pop['Population'])
     set_growth_index(ret)
     return ret
 
@@ -165,9 +182,8 @@ def normalize_calc_value(value):
 
 def set_growth_index(ret):
     x = normalize_calc_value(ret['Active Cases'])*normalize_calc_value(ret['Population Density'])*ret['Infected Rate Growth'] * \
-        ret['Death Rate Growth']*normalize_calc_value(ret['Deaths']) * \
-        ret['High Risk Population'] / \
-        ret['Population']/int(os.getenv("DIVIDE_X"))
+        ret['Death Rate Growth']*normalize_calc_value(
+            ret['Deaths']) * ret['High Risk Population'] / ret['Population']/int(os.getenv("DIVIDE_X"))
     i_term = 0.17
     k_term = 100
     r_term = 0.1
