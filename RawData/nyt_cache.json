@@ -1,0 +1,2086 @@
+[
+    {
+        "key": "AL",
+        "values": [
+            {
+                "place_nyt_style": "Birmingham",
+                "geography": "city",
+                "state": "AL",
+                "order": "Shelter in place",
+                "population": 209880,
+                "formal_order": true,
+                "link_order": "https://htv-prod-media.s3.amazonaws.com/files/2020-3-24-city-of-birminghamshelter-in-place-ordinance-1585073524.pdf",
+                "link_localnews": "https://www.al.com/news/2020/03/birmingham-shelter-in-place-order-heres-what-it-means.html",
+                "place_fmt": "Birmingham",
+                "population_fmt": "210,000",
+                "date_effective_fmt": "effective March 24 at 12 p.m."
+            }
+        ],
+        "statename": "Alabama",
+        "blurb": "Gov. Kay Ivey said she did not plan to issue a statewide order, saying that she wanted to balance the health of the state's residents with the health of the economy. \"Y’all, we are not California, we’re not New York, we aren’t even Louisiana,\" she said on a conference call with reporters, according to AL.com. Birmingham, the largest city in the state, has issued a shelter-in-place order for its residents. ",
+        "statewide": false
+    },
+    {
+        "key": "AK",
+        "values": [
+            {
+                "place_nyt_style": "Alaska",
+                "geography": "state",
+                "state": "AK",
+                "order": "Stay at home",
+                "population": 737438,
+                "formal_order": true,
+                "link_order": "http://dhss.alaska.gov/News/Documents/press/2020/FAQs_03272020-SOA-COVID-19-Health-Mandate-011-012.pdf",
+                "link_localnews": "https://www.adn.com/alaska-news/2020/03/27/anchorage-sees-first-covid-19-death-in-alaska-hospital-officials-say/",
+                "place_fmt": "Statewide",
+                "population_fmt": "737,000",
+                "date_effective_fmt": "effective March 28 at 5 p.m."
+            }
+        ],
+        "statename": "Alaska",
+        "blurb": "\"We crossed a line today,\" Gov. Mike Dunleavy said, issuing instructions for people to stay home or remain six feet or more from one another when outside. The mayor of Anchorage had previously asked residents to \"hunker down.\"",
+        "statewide": true
+    },
+    {
+        "key": "AZ",
+        "values": [
+            {
+                "place_nyt_style": "Arizona",
+                "geography": "state",
+                "state": "AZ",
+                "order": "Stay at home",
+                "population": 7171646,
+                "formal_order": true,
+                "link_order": "https://azgovernor.gov/governor/news/2020/03/new-executive-order-stay-home-stay-healthy-stay-connected",
+                "link_localnews": "https://www.azcentral.com/story/news/local/arizona-health/2020/03/30/arizona-coronavirus-stay-home-order-issued-gov-doug-ducey/5088109002/",
+                "place_fmt": "Statewide",
+                "population_fmt": "7.2 million",
+                "date_effective_fmt": "effective March 31 at 5 p.m."
+            }
+        ],
+        "statename": "Arizona",
+        "blurb": "Gov. Doug Ducey said he issued the order at the recommendation of health officials. \"I’m grateful to everyone making adjustments to fight this virus and protect others,\" he said. \"We need to keep these efforts up.\"",
+        "statewide": true
+    },
+    {
+        "key": "CA",
+        "values": [
+            {
+                "place_nyt_style": "California",
+                "geography": "state",
+                "state": "CA",
+                "order": "Stay at home",
+                "population": 39557045,
+                "formal_order": true,
+                "link_order": "https://covid19.ca.gov/img/Executive-Order-N-33-20.pdf",
+                "link_localnews": "https://www.latimes.com/california/story/2020-03-20/coronavirus-and-california-landmarks-empty-and-surreal",
+                "place_fmt": "Statewide",
+                "population_fmt": "39.6 million",
+                "date_effective_fmt": "effective March 19"
+            }
+        ],
+        "statename": "California",
+        "blurb": "California, America’s most populous state, was the first to order all residents to stay home. Others quickly followed suit. “This is not a permanent state, this is a moment in time,” Gov. Gavin Newsom said. “We will look back at these decisions as pivotal.”",
+        "statewide": true
+    },
+    {
+        "key": "CO",
+        "values": [
+            {
+                "place_nyt_style": "Colorado",
+                "geography": "state",
+                "state": "CO",
+                "order": "Stay at home",
+                "population": 5695564,
+                "formal_order": true,
+                "link_order": "https://twitter.com/GovofCO/status/1242943191394877441?s=20",
+                "link_localnews": "https://gazette.com/news/colorado-stay-at-home-order-issued-by-gov-polis-wednesday/article_7b3e0834-6ed7-11ea-84db-678f7b49011f.html",
+                "place_fmt": "Statewide",
+                "population_fmt": "5.7 million",
+                "date_effective_fmt": "effective March 26 at 6 a.m."
+            }
+        ],
+        "statename": "Colorado",
+        "blurb": "A number of counties and cities in the state, including Denver and Boulder, had issued their own stay-at-home orders, but Gov. Jared Polis also issued a statewide order, reiterating the need for everyone to stay at home. “We owe it to ourselves and our fellow Americans in order to save lives,” he said.",
+        "statewide": true
+    },
+    {
+        "key": "CT",
+        "values": [
+            {
+                "place_nyt_style": "Connecticut",
+                "geography": "state",
+                "state": "CT",
+                "order": "Stay at home",
+                "population": 3572665,
+                "formal_order": false,
+                "link_order": "https://portal.ct.gov/Office-of-the-Governor/News/Press-Releases/2020/03-2020/Governor-Lamont-Signs-Executive-Order-Asking-Connecticut-Businesses-and-Residents-Stay-Safe",
+                "link_localnews": "https://www.courant.com/coronavirus/hc-news-coronavirus-update-0320-20200320-m5oro7ss3vb3nlqsormcmt6nty-story.html",
+                "place_fmt": "Statewide",
+                "population_fmt": "3.6 million",
+                "date_effective_fmt": "effective March 23 at 8 p.m."
+            }
+        ],
+        "statename": "Connecticut",
+        "blurb": "“At this critical time it is essential that everyone just stay home,” Gov. Ned Lamont said. ",
+        "statewide": true
+    },
+    {
+        "key": "DE",
+        "values": [
+            {
+                "place_nyt_style": "Delaware",
+                "geography": "state",
+                "state": "DE",
+                "order": "Shelter in place",
+                "population": 973000,
+                "formal_order": true,
+                "link_order": "https://governor.delaware.gov/wp-content/uploads/sites/24/2020/03/Fifth-Modification-to-State-of-Emergency-03222020.pdf",
+                "link_localnews": "https://www.delawareonline.com/story/news/coronavirus-in-delaware/2020/03/22/coronavirus-delaware-count-up-47-confirmed-cases-state/2894015001/",
+                "place_fmt": "Statewide",
+                "population_fmt": "973,000",
+                "date_effective_fmt": "effective March 24 at 8 a.m."
+            }
+        ],
+        "statename": "Delaware",
+        "blurb": "“I don’t want Delaware to be the example of what not to do in response to this crisis,” Gov. John Carney said. ",
+        "statewide": true
+    },
+    {
+        "key": "DC",
+        "values": [
+            {
+                "place_nyt_style": "District of Columbia",
+                "geography": "D.C.",
+                "state": "DC",
+                "order": "Stay at home",
+                "population": 702455,
+                "formal_order": true,
+                "link_order": "https://coronavirus.dc.gov/sites/default/files/dc/sites/coronavirus/page_content/attachments/Mayor%27s%20Order%202020-054%20Stay%20at%20Home.pdf",
+                "link_localnews": "https://www.washingtonpost.com/dc-md-va/2020/03/30/coronavirus-dc-maryland-virginia-live-updates/",
+                "place_fmt": "District-wide",
+                "population_fmt": "702,000",
+                "date_effective_fmt": "effective April 1 at 12:01 a.m."
+            }
+        ],
+        "statename": "District of Columbia",
+        "blurb": "Mayor Muriel E. Bowser issued a stay-at-home order for all residents, joining the nearby states of Maryland and Virginia in a move that virtually shut down the nation's capital region. \"Many people want to know how they can help right now,\" the mayor said. \"For most people this is how — by staying home.\"",
+        "statewide": true
+    },
+    {
+        "key": "FL",
+        "values": [
+            {
+                "place_nyt_style": "Palm Coast",
+                "geography": "city",
+                "state": "FL",
+                "order": "Stay at home",
+                "population": 87607,
+                "formal_order": true,
+                "link_order": "https://www.palmcoastgov.com/news/article/4608",
+                "link_localnews": "https://www.news4jax.com/news/local/2020/03/23/palm-coast-issues-voluntary-stay-home-order-to-city-residents/",
+                "place_fmt": "Palm Coast",
+                "population_fmt": "88,000",
+                "date_effective_fmt": "effective March 22"
+            },
+            {
+                "place_nyt_style": "Alachua County",
+                "geography": "county",
+                "state": "FL",
+                "order": "Stay at home",
+                "population": 269956,
+                "formal_order": true,
+                "link_order": "https://alachuacounty.us/Depts/Communications/Documents/ADACompliant/Stayathomeorder20-09.pdf",
+                "link_localnews": "https://www.gainesville.com/news/20200323/stay-homersquo",
+                "place_fmt": "Alachua County",
+                "population_fmt": "270,000",
+                "date_effective_fmt": "effective March 24 at 12:01 a.m."
+            },
+            {
+                "place_nyt_style": "Broward County",
+                "geography": "county",
+                "state": "FL",
+                "order": "Shelter in place",
+                "population": 1951260,
+                "formal_order": true,
+                "link_order": "https://www.broward.org/CoronaVirus/Documents/BC-EmergencyOrder20-03.pdf",
+                "link_localnews": "https://www.local10.com/news/local/2020/03/26/broward-county-issues-shelter-in-place-order/",
+                "place_fmt": "Broward County",
+                "population_fmt": "2 million",
+                "date_effective_fmt": "effective March 27 at 12:01 a.m."
+            },
+            {
+                "place_nyt_style": "Hillsborough County",
+                "geography": "county",
+                "state": "FL",
+                "order": "Safer at home",
+                "population": 1436888,
+                "formal_order": false,
+                "link_order": "https://www.hillsboroughcounty.org/en/media-center/press-releases/2020/03/25/hillsborough-county-emergency-policy-group-expected-to-vote-directive-and-order-on-thursday",
+                "link_localnews": "https://www.tampabay.com/news/health/2020/03/26/hillsborough-agrees-to-keep-residents-home-in-coronavirus-times/?clavis&utm_expid=.rZxRlJI0T86fmAabR1Jv8w.1&utm_referrer=https%3A%2F%2Fwww.google.com%2F",
+                "place_fmt": "Hillsborough County",
+                "population_fmt": "1.4 million",
+                "date_effective_fmt": "effective March 27 at 10 p.m."
+            },
+            {
+                "place_nyt_style": "Leon County",
+                "geography": "county",
+                "state": "FL",
+                "order": "Stay at home",
+                "population": 292502,
+                "formal_order": true,
+                "link_order": "https://www.facebook.com/CityofTLH/videos/913536232414468/",
+                "link_localnews": "https://www.wctv.tv/content/news/Stay-at-home-order-curfew-to-be-enacted-in-Leon-County-to-stop-spread-of-COVID-19-569066571.html",
+                "place_fmt": "Leon County",
+                "population_fmt": "293,000",
+                "date_effective_fmt": "effective March 25 at 11 p.m."
+            },
+            {
+                "place_nyt_style": "Miami-Dade County",
+                "geography": "county",
+                "state": "FL",
+                "order": "Stay at home",
+                "population": 2761581,
+                "formal_order": false,
+                "link_order": "https://m.facebook.com/MayorGimenez/photos/a.234793143210424/2966205803402464",
+                "link_localnews": "https://www.miamiherald.com/news/coronavirus/article241433806.html",
+                "place_fmt": "Miami-Dade County",
+                "population_fmt": "2.8 million",
+                "date_effective_fmt": "effective March 25"
+            },
+            {
+                "place_nyt_style": "Monroe County",
+                "geography": "county",
+                "state": "FL",
+                "order": "Safer at home",
+                "population": 75027,
+                "formal_order": true,
+                "link_order": false,
+                "link_localnews": "https://www.miamiherald.com/news/coronavirus/article241609941.html",
+                "place_fmt": "Monroe County",
+                "population_fmt": "75,000",
+                "date_effective_fmt": "effective March 30"
+            },
+            {
+                "place_nyt_style": "Orange County",
+                "geography": "county",
+                "state": "FL",
+                "order": "Stay at home",
+                "population": 1380645,
+                "formal_order": true,
+                "link_order": "https://www.orangecountyfl.net/Portals/0/Library/Emergency-Safety/docs/coronavirus/Emergency%20Executive%20Order%20No.%202020-04%20-%2003-24-20.pdf",
+                "link_localnews": "https://www.orlandosentinel.com/coronavirus/os-ne-coronavirus-orange-stay-at-home-order-20200324-2nfuihnaujc6xifbgsyiedffpe-story.html",
+                "place_fmt": "Orange County",
+                "population_fmt": "1.4 million",
+                "date_effective_fmt": "effective March 26 at 11 p.m."
+            },
+            {
+                "place_nyt_style": "Osceola County",
+                "geography": "county",
+                "state": "FL",
+                "order": "Stay at home",
+                "population": 367990,
+                "formal_order": true,
+                "link_order": "https://www.osceola.org/core/fileparse.php/7578/urlt/032520_Executive-Order-2-Shelter-in-Place-Osceola.pdf",
+                "link_localnews": "https://www.orlandosentinel.com/coronavirus/os-ne-coronavirus-osceola-stay-at-home-20200325-fwhr3rwvibgrpnc2jomeaa6h4y-story.html",
+                "place_fmt": "Osceola County",
+                "population_fmt": "368,000",
+                "date_effective_fmt": "effective March 26 at 11 p.m."
+            },
+            {
+                "place_nyt_style": "Palm Beach County",
+                "geography": "county",
+                "state": "FL",
+                "order": "Stay at home",
+                "population": 1485941,
+                "formal_order": true,
+                "link_order": "http://discover.pbcgov.org/PDF/COVID19/PBC-Directing-Stay-Home-Stay-Safe-Safer-at-Home-Policy-Amendment.pdf",
+                "link_localnews": "https://www.palmbeachpost.com/news/20200330/coronavirus-palm-beach-county-under-rsquosafer-at-homersquo-order-pbc-cases-up-to-423",
+                "place_fmt": "Palm Beach County",
+                "population_fmt": "1.5 million",
+                "date_effective_fmt": "effective March 30 at 12:01 a.m."
+            },
+            {
+                "place_nyt_style": "Pinellas County",
+                "geography": "county",
+                "state": "FL",
+                "order": "Stay at home",
+                "population": 975280,
+                "formal_order": true,
+                "link_order": "https://twitter.com/PinellasCoNews/status/1242851540324450305?s=20",
+                "link_localnews": "https://www.tampabay.com/news/health/2020/03/25/pinellas-orders-county-to-stay-at-home-amid-coronavirus-first-in-tampa-bay-to-enact-measure/",
+                "place_fmt": "Pinellas County",
+                "population_fmt": "975,000",
+                "date_effective_fmt": "effective March 26 at 12 p.m."
+            }
+        ],
+        "statename": "Florida",
+        "blurb": "Gov. Ron DeSantis originally said he did not plan to order all Floridians to stay at home, in part because of the unknown risks of extended confinement, but eventually issued an order for parts of southeast Florida. Other places like Leon County, which includes Tallahassee, previously issued their own orders. ",
+        "statewide": false
+    },
+    {
+        "key": "GA",
+        "values": [
+            {
+                "place_nyt_style": "Atlanta",
+                "geography": "city",
+                "state": "GA",
+                "order": "Stay at home",
+                "population": 498044,
+                "formal_order": true,
+                "link_order": "https://www.atlantaga.gov/Home/ShowDocument?id=45508",
+                "link_localnews": "https://www.ajc.com/news/breaking-news/breaking-atlanta-mayor-signs-day-stay-home-order-due-coronavirus-pandemic/HpYoORZDNNqdIWc3QfKWwK/",
+                "place_fmt": "Atlanta",
+                "population_fmt": "498,000",
+                "date_effective_fmt": "effective March 24 at 12 a.m."
+            },
+            {
+                "place_nyt_style": "Blakely",
+                "geography": "city",
+                "state": "GA",
+                "order": "Shelter in place",
+                "population": 4623,
+                "formal_order": true,
+                "link_order": "http://media.graytvinc.com/documents/Signed-Declaration-3-24-20-1.pdf",
+                "link_localnews": "https://www.wtvy.com/content/news/Blakely-mayor-issues-mandatory-shelter-in-place-order-effective-Tuesday-night-569091341.html",
+                "place_fmt": "Blakely",
+                "population_fmt": "5,000",
+                "date_effective_fmt": "effective March 24 at 12 a.m."
+            },
+            {
+                "place_nyt_style": "Carrollton",
+                "geography": "city",
+                "state": "GA",
+                "order": "Shelter in place",
+                "population": 26443,
+                "formal_order": true,
+                "link_order": "https://carrolltonga.com/wp-content/uploads/2020/03/Resolution-09-2020-CORONAVIRUS-SHELTER-IN-PLACE.pdf",
+                "link_localnews": "https://times-georgian.com/news/99005/county-board-of-health-issues-shelter-in-place-order/",
+                "place_fmt": "Carrollton",
+                "population_fmt": "26,000",
+                "date_effective_fmt": "effective March 25"
+            },
+            {
+                "place_nyt_style": "Savannah",
+                "geography": "city",
+                "state": "GA",
+                "order": "Shelter in place",
+                "population": 145862,
+                "formal_order": true,
+                "link_order": "https://www.savannahga.gov/DocumentCenter/View/18659/Shelter-At-home-Order?bidId=",
+                "link_localnews": "https://www.savannahnow.com/news/20200324/savannah-mayor-issues-mandatory-shelter-in-place-order-effective-tuesday-night",
+                "place_fmt": "Savannah",
+                "population_fmt": "146,000",
+                "date_effective_fmt": "effective March 24 at 11:59 p.m."
+            },
+            {
+                "place_nyt_style": "Athens-Clarke County",
+                "geography": "county",
+                "state": "GA",
+                "order": "Shelter in place",
+                "population": 125964,
+                "formal_order": true,
+                "link_order": "https://www.athensclarkecounty.com/DocumentCenter/View/67248/03-Second-Declaration-of-a-Local-State-of-Emergency-Related-to-COVID-19-Final-Approved-Version?bidId=",
+                "link_localnews": "https://www.wsbtv.com/news/local/clarke-county/athens-clarke-county-officials-order-shelter-place-over-coronavirus/ZGGF3PNVZBDX7J6JSLFHUXUPXM/",
+                "place_fmt": "Athens-Clarke County",
+                "population_fmt": "126,000",
+                "date_effective_fmt": "effective March 20 at 12:01 a.m."
+            },
+            {
+                "place_nyt_style": "Dougherty County",
+                "geography": "county",
+                "state": "GA",
+                "order": "Shelter in place",
+                "population": 91243,
+                "formal_order": true,
+                "link_order": "https://drive.google.com/file/d/1UTK_KZgFrFmsWzHtNjUrPUCvKt02F9I5/view",
+                "link_localnews": "https://www.walb.com/2020/03/20/watch-live-dougherty-co-leaders-address-latest-covid-/",
+                "place_fmt": "Dougherty County",
+                "population_fmt": "91,000",
+                "date_effective_fmt": "effective March 21 at 12:01 a.m."
+            }
+        ],
+        "statename": "Georgia",
+        "blurb": "The mayor of Atlanta issued an order for residents to stay at home, going further than the governor's directive for all of Georgia. “Given our population density, high rate of asthma, and various underlying health conditions found within our city’s populations, I am issuing a Stay at Home Order for Atlantans,\" Mayor Keisha Lance Bottoms said in a statement to The Atlanta Journal Constitution. ",
+        "statewide": false
+    },
+    {
+        "key": "HI",
+        "values": [
+            {
+                "place_nyt_style": "Hawaii",
+                "geography": "state",
+                "state": "HI",
+                "order": "Stay at home",
+                "population": 1420491,
+                "formal_order": true,
+                "link_order": "https://governor.hawaii.gov/wp-content/uploads/2020/03/2003162-ATG_Third-Supplementary-Proclamation-for-COVID-19-signed.pdf",
+                "link_localnews": "https://www.hawaiinewsnow.com/2020/03/24/live-governor-expected-issue-statewide-stay-at-home-order-coronavirus-cases-swell/",
+                "place_fmt": "Statewide",
+                "population_fmt": "1.4 million",
+                "date_effective_fmt": "effective March 25 at 12:01 a.m."
+            }
+        ],
+        "statename": "Hawaii",
+        "blurb": "As in other states, there are exceptions to the stay-at-home order in Hawaii, including leaving the house to go surfing and swimming. But the governor's office said violations could be punishable by a fine of up to $5,000, or as much as one year in jail. “The threat of COVID-19 is unprecedented and requires aggressive action,\" Gov. David Ige said. ",
+        "statewide": true
+    },
+    {
+        "key": "ID",
+        "values": [
+            {
+                "place_nyt_style": "Idaho",
+                "geography": "state",
+                "state": "ID",
+                "order": "Stay at home",
+                "population": 1754208,
+                "formal_order": true,
+                "link_order": "https://coronavirus.idaho.gov/statewide-stay-home-order/",
+                "link_localnews": "https://amp.idahostatesman.com/news/coronavirus/article241495446.html",
+                "place_fmt": "Statewide",
+                "population_fmt": "1.8 million",
+                "date_effective_fmt": "effective March 25 at 1:30 p.m."
+            }
+        ],
+        "statename": "Idaho",
+        "blurb": "“Our health care and public safety workers are putting themselves in harm’s way to respond to the coronavirus emergency, and we owe it to them to do our part by following this statewide stay-home order,” Gov. Brad Little said.",
+        "statewide": true
+    },
+    {
+        "key": "IL",
+        "values": [
+            {
+                "place_nyt_style": "Illinois",
+                "geography": "state",
+                "state": "IL",
+                "order": "Stay at home",
+                "population": 12741080,
+                "formal_order": true,
+                "link_order": "https://www2.illinois.gov/Pages/news-item.aspx?ReleaseID=21288",
+                "link_localnews": "https://www.chicagotribune.com/coronavirus/ct-coronavirus-illinois-shelter-in-place-lockdown-order-20200320-teedakbfw5gvdgmnaxlel54hau-story.html",
+                "place_fmt": "Statewide",
+                "population_fmt": "12.7 million",
+                "date_effective_fmt": "effective March 21 at 5 p.m."
+            }
+        ],
+        "statename": "Illinois",
+        "blurb": "“I don’t come to this decision easily,” Gov. J.B. Pritzker said. “I fully recognize that, in some cases, I am choosing between people’s lives and saving people’s livelihood. But ultimately, you can’t have a livelihood if you don’t have your life.”",
+        "statewide": true
+    },
+    {
+        "key": "IN",
+        "values": [
+            {
+                "place_nyt_style": "Indiana",
+                "geography": "state",
+                "state": "IN",
+                "order": "Stay at home",
+                "population": 6691878,
+                "formal_order": true,
+                "link_order": "https://www.in.gov/gov/3232.htm",
+                "link_localnews": "https://www.indystar.com/story/news/health/2020/03/23/indiana-coronavirus-updates-indianapolis-covid-19-latest-news/2896967001/",
+                "place_fmt": "Statewide",
+                "population_fmt": "6.7 million",
+                "date_effective_fmt": "effective March 24 at 11:59 p.m."
+            }
+        ],
+        "statename": "Indiana",
+        "blurb": "Gov. Eric J. Holcomb asked \"Hoosiers to hunker down.\" He added: “You must be part of the solution, not the problem.”",
+        "statewide": true
+    },
+    {
+        "key": "KS",
+        "values": [
+            {
+                "place_nyt_style": "Kansas",
+                "geography": "state",
+                "state": "KS",
+                "order": "Stay at home",
+                "population": 2911505,
+                "formal_order": true,
+                "link_order": "https://governor.kansas.gov/governor-kelly-issues-temporary-statewide-stay-home-order-in-ongoing-effort-to-combat-covid-19/",
+                "link_localnews": "https://www.cjonline.com/news/20200328/kansas-coronavirus-update-gov-laura-kelly-imposes-statewide-stay-at-home-order-state-logs-5th-death-261-cases",
+                "place_fmt": "Statewide",
+                "population_fmt": "2.9 million",
+                "date_effective_fmt": "effective March 30 at 12:01 a.m."
+            }
+        ],
+        "statename": "Kansas",
+        "blurb": "After several municipalities in Kansas issued stay-at-home instructions in quick succession, including in the greater Kansas City region, Gov. Laura Kelly issued a statewide order. \"While I left these decisions to local health departments as long as possible,\" she said, \"the reality is that the patchwork approach that has developed is inconsistent and is a recipe for chaos.\" ",
+        "statewide": true
+    },
+    {
+        "key": "KY",
+        "values": [
+            {
+                "place_nyt_style": "Kentucky",
+                "geography": "state",
+                "state": "KY",
+                "order": "Healthy at home",
+                "population": 4468402,
+                "formal_order": false,
+                "link_order": "https://kentucky.gov/Pages/Activity-stream.aspx?n=GovernorBeshear&prId=105",
+                "link_localnews": "https://www.courier-journal.com/story/news/local/2020/03/23/coronavirus-kentucky-healthy-at-home-shelter-in-place-andy-beshear/2899060001/",
+                "place_fmt": "Statewide",
+                "population_fmt": "4.5 million",
+                "date_effective_fmt": "effective March 26 at 8 p.m."
+            }
+        ],
+        "statename": "Kentucky",
+        "blurb": "Gov. Andy Beshear ordered all non-essential businesses to stop operating in-person services by March 26 and urged residents to stay \"healthy at home.\" In a news conference on March 27, he clarified that the state's campaign amounted to telling residents to stay home. \"That doesn't mean you need to cower down in your home,\" he said. But \"you stay at home, unless you are getting groceries or other supplies that you may need.\" ",
+        "statewide": true
+    },
+    {
+        "key": "LA",
+        "values": [
+            {
+                "place_nyt_style": "Louisiana",
+                "geography": "state",
+                "state": "LA",
+                "order": "Stay at home",
+                "population": 4600000,
+                "formal_order": true,
+                "link_order": "https://gov.louisiana.gov/assets/Proclamations/2020/JBE-33-2020.pdf",
+                "link_localnews": "https://www.theadvocate.com/baton_rouge/news/coronavirus/article_922869e8-6c6d-11ea-aeee-6b6fd5e8f4bd.html",
+                "place_fmt": "Statewide",
+                "population_fmt": "4.6 million",
+                "date_effective_fmt": "effective March 23 at 5 p.m."
+            }
+        ],
+        "statename": "Louisiana",
+        "blurb": "“If we want to flatten the curve, we have to take action today,” Gov. John Bel Edwards said. New Orleans had previously issued its own order. ",
+        "statewide": true
+    },
+    {
+        "key": "ME",
+        "values": [
+            {
+                "place_nyt_style": "Portland",
+                "geography": "city",
+                "state": "ME",
+                "order": "Stay at home",
+                "population": 66417,
+                "formal_order": true,
+                "link_order": "https://www.portlandmaine.gov/DocumentCenter/View/27535/Portland-Emergency-Stay-at-Home-Proclamation",
+                "link_localnews": "https://www.pressherald.com/2020/03/24/covid-19-questions-and-answers-for-portland-and-maine/",
+                "place_fmt": "Portland",
+                "population_fmt": "66,000",
+                "date_effective_fmt": "effective March 25 at 5 p.m."
+            }
+        ],
+        "statename": "Maine",
+        "blurb": "“We all need to function as if we have the virus,” Portland's city manager, Jon Jennings, said.",
+        "statewide": false
+    },
+    {
+        "key": "MD",
+        "values": [
+            {
+                "place_nyt_style": "Maryland",
+                "geography": "state",
+                "state": "MD",
+                "order": "Stay at home",
+                "population": 6042718,
+                "formal_order": true,
+                "link_order": "https://governor.maryland.gov/2020/03/30/as-covid-19-crisis-escalates-in-capital-region-governor-hogan-issues-stay-at-home-order-effective-tonight/",
+                "link_localnews": "https://www.baltimoresun.com/coronavirus/bs-md-stay-at-home-hogan-covid-19-20200330-pmid22rvirdwbppx4xpgjadoim-story.html",
+                "place_fmt": "Statewide",
+                "population_fmt": "6 million",
+                "date_effective_fmt": "effective March 30 at 8 p.m."
+            }
+        ],
+        "statename": "Maryland",
+        "blurb": "Citing a drastic uptick in cases and deaths in Maryland and the United States, Gov. Larry Hogan issued a statewide stay-at-home order. \"We are no longer asking or suggesting that Marylanders stay home,\" he said. \"We are directing them to do so.\"",
+        "statewide": true
+    },
+    {
+        "key": "MA",
+        "values": [
+            {
+                "place_nyt_style": "Massachusetts",
+                "geography": "state",
+                "state": "MA",
+                "order": "Stay at home advisory",
+                "population": 6902149,
+                "formal_order": false,
+                "link_order": "https://www.mass.gov/news/governor-charlie-baker-orders-all-non-essential-businesses-to-cease-in-person-operation",
+                "link_localnews": "https://www.bostonglobe.com/2020/03/23/metro/list-what-can-stay-open-during-bakers-stay-at-home-advisory/",
+                "place_fmt": "Statewide",
+                "population_fmt": "6.9 million",
+                "date_effective_fmt": "effective March 24 at 12 p.m."
+            }
+        ],
+        "statename": "Massachusetts",
+        "blurb": "Gov. Charlie Baker stopped short of declaring a formal order, but announced an advisory for residents to stay home. “I do not believe I can or should order U.S. citizens to be confined to their home for days on end,” he said. “It doesn’t make sense from a public health point of view, and it’s not realistic.”",
+        "statewide": true
+    },
+    {
+        "key": "MI",
+        "values": [
+            {
+                "place_nyt_style": "Michigan",
+                "geography": "state",
+                "state": "MI",
+                "order": "Stay at home",
+                "population": 9995915,
+                "formal_order": true,
+                "link_order": "https://www.michigan.gov/whitmer/0,9309,7-387-90499_90705-522626--,00.html",
+                "link_localnews": "https://www.freep.com/story/news/local/michigan/2020/03/23/michigan-shelter-in-place-order-coronavirus/2887578001/",
+                "place_fmt": "Statewide",
+                "population_fmt": "10 million",
+                "date_effective_fmt": "effective March 24 at 12:01 a.m."
+            }
+        ],
+        "statename": "Michigan",
+        "blurb": "“Without a comprehensive national strategy, we, the states, must take action,” Gov. Gretchen Whitmer said, urging residents to stay home.",
+        "statewide": true
+    },
+    {
+        "key": "MN",
+        "values": [
+            {
+                "place_nyt_style": "Minnesota",
+                "geography": "state",
+                "state": "MN",
+                "order": "Stay at home",
+                "population": 5611179,
+                "formal_order": true,
+                "link_order": "https://mn.gov/governor/covid-19/",
+                "link_localnews": "https://www.startribune.com/gov-tim-walz-to-order-new-covid-19-restrictions-on-minnesotans/569095212/",
+                "place_fmt": "Statewide",
+                "population_fmt": "5.6 million",
+                "date_effective_fmt": "effective March 27 at 11:59 p.m."
+            }
+        ],
+        "statename": "Minnesota",
+        "blurb": "Gov. Tim Walz emphasized the need to slow the spread of the virus over time and not overwhelm hospitals in Minnesota. \"We are asking you — because it is going to take cooperation and collaboration — stay home,\" he said. ",
+        "statewide": true
+    },
+    {
+        "key": "MS",
+        "values": [
+            {
+                "place_nyt_style": "Oxford",
+                "geography": "city",
+                "state": "MS",
+                "order": "Stay at home",
+                "population": 24528,
+                "formal_order": true,
+                "link_order": "https://www.oxfordms.net/documents/misc/second_emergency_resolution_signed.pdf",
+                "link_localnews": "https://hottytoddy.com/2020/03/22/oxfords-passes-stay-at-home-resolution-closing-non-essential-businesses/",
+                "place_fmt": "Oxford",
+                "population_fmt": "25,000",
+                "date_effective_fmt": "effective March 22"
+            }
+        ],
+        "statename": "Mississippi",
+        "blurb": "The mayor of Oxford, Robyn Tannehill, asked \"every single citizen of Oxford to do their part.\" ",
+        "statewide": false
+    },
+    {
+        "key": "MO",
+        "values": [
+            {
+                "place_nyt_style": "Kansas City",
+                "geography": "city",
+                "state": "MO",
+                "order": "Stay at home",
+                "population": 491918,
+                "formal_order": true,
+                "link_order": "https://www.kcmo.gov/city-hall/departments/health/coronavirus-covid-19/stay-at-home-order-faq",
+                "link_localnews": "https://www.kansascity.com/news/coronavirus/article241408836.html",
+                "place_fmt": "Kansas City",
+                "population_fmt": "492,000",
+                "date_effective_fmt": "effective March 24 at 12:01 a.m."
+            },
+            {
+                "place_nyt_style": "St. Joseph",
+                "geography": "city",
+                "state": "MO",
+                "order": "Shelter in place",
+                "population": 75959,
+                "formal_order": true,
+                "link_order": "https://www.stjoemo.info/DocumentCenter/View/11348/Reissued-Second-Amended-Declaration-and-Order-PDF",
+                "link_localnews": "https://themissouritimes.com/coronavirus-in-missouri-which-counties-have-implemented-stay-at-home-rules/",
+                "place_fmt": "St. Joseph",
+                "population_fmt": "76,000",
+                "date_effective_fmt": "effective March 24 at 12:01 a.m."
+            },
+            {
+                "place_nyt_style": "St. Louis",
+                "geography": "city",
+                "state": "MO",
+                "order": "Stay at home",
+                "population": 302838,
+                "formal_order": true,
+                "link_order": "https://assets.documentcloud.org/documents/6816639/St-Louis-City-Order-Health-Commissioner-s-Order.pdf",
+                "link_localnews": "\nhttps://www.stltoday.com/lifestyles/health-med-fit/coronavirus/st-louis-and-st-louis-county-order-residents-to-stay/article_da7344c9-fabb-5e64-9d3f-3883bf1fc1f7.html",
+                "place_fmt": "St. Louis",
+                "population_fmt": "303,000",
+                "date_effective_fmt": "effective March 23 at 6 p.m."
+            },
+            {
+                "place_nyt_style": "Boone County",
+                "geography": "county",
+                "state": "MO",
+                "order": "Stay at home",
+                "population": 180005,
+                "formal_order": true,
+                "link_order": "https://www.showmeboone.com/common/pdf/Boone%20County%20Order%20No%202020-03C.pdf",
+                "link_localnews": "https://www.columbiatribune.com/news/20200324/stay-at-home-order-issued-for-boone-county",
+                "place_fmt": "Boone County",
+                "population_fmt": "180,000",
+                "date_effective_fmt": "effective March 25 at 8 a.m."
+            },
+            {
+                "place_nyt_style": "Cass County",
+                "geography": "county",
+                "state": "MO",
+                "order": "Stay at home",
+                "population": 104954,
+                "formal_order": true,
+                "link_order": "https://www.casscounty.com/DocumentCenter/View/2246/Public-Health-Emergency-Order",
+                "link_localnews": "https://www.kansascity.com/news/coronavirus/article241436531.html",
+                "place_fmt": "Cass County",
+                "population_fmt": "105,000",
+                "date_effective_fmt": "effective March 24 at 12:01 a.m."
+            },
+            {
+                "place_nyt_style": "Clay County",
+                "geography": "county",
+                "state": "MO",
+                "order": "Stay at home",
+                "population": 246365,
+                "formal_order": true,
+                "link_order": "https://htv-prod-media.s3.amazonaws.com/files/clay-county-public-health-emergency-order-updated-3-22-20-1584907629.pdf",
+                "link_localnews": "https://www.mycouriertribune.com/news/county_and_northland_news/clay-county-joins-stay-at-home-order/article_684a5d74-0c1c-534e-b410-2bb14900d6a1.html",
+                "place_fmt": "Clay County",
+                "population_fmt": "246,000",
+                "date_effective_fmt": "effective March 24 at 12:01 a.m."
+            },
+            {
+                "place_nyt_style": "Cole County",
+                "geography": "county",
+                "state": "MO",
+                "order": "Stay at home",
+                "population": 76796,
+                "formal_order": true,
+                "link_order": "https://colecounty.org/DocumentCenter/View/5169/Technical-Advisory-1--3-23-2020PDF-",
+                "link_localnews": "https://themissouritimes.com/coronavirus-in-missouri-which-counties-have-implemented-stay-at-home-rules/",
+                "place_fmt": "Cole County",
+                "population_fmt": "77,000",
+                "date_effective_fmt": "effective March 23"
+            },
+            {
+                "place_nyt_style": "Greene County",
+                "geography": "county",
+                "state": "MO",
+                "order": "Stay at home",
+                "population": 291923,
+                "formal_order": true,
+                "link_order": "https://www.springfieldmo.gov/CivicAlerts.aspx?AID=6638",
+                "link_localnews": "https://themissouritimes.com/coronavirus-in-missouri-which-counties-have-implemented-stay-at-home-rules/",
+                "place_fmt": "Greene County",
+                "population_fmt": "292,000",
+                "date_effective_fmt": "effective March 26 at 12:01 a.m."
+            },
+            {
+                "place_nyt_style": "Jackson County",
+                "geography": "county",
+                "state": "MO",
+                "order": "Stay at home",
+                "population": 700307,
+                "formal_order": true,
+                "link_order": "https://www.jacksongov.org/1186/Stay-at-Home-FAQs",
+                "link_localnews": "https://www.kansascity.com/news/coronavirus/article241400106.html",
+                "place_fmt": "Jackson County",
+                "population_fmt": "700,000",
+                "date_effective_fmt": "effective March 24 at 12:01 a.m."
+            },
+            {
+                "place_nyt_style": "Jefferson County",
+                "geography": "county",
+                "state": "MO",
+                "order": "Stay at home",
+                "population": 224347,
+                "formal_order": true,
+                "link_order": "https://themissouritimes.com/wp-content/uploads/2020/03/20-030.4-Joint-Stay-at-Home-Order.pdf",
+                "link_localnews": "https://themissouritimes.com/coronavirus-in-missouri-which-counties-have-implemented-stay-at-home-rules/",
+                "place_fmt": "Jefferson County",
+                "population_fmt": "224,000",
+                "date_effective_fmt": "effective March 24 at 12:01 a.m."
+            },
+            {
+                "place_nyt_style": "Platte County",
+                "geography": "county",
+                "state": "MO",
+                "order": "Shelter in place",
+                "population": 102985,
+                "formal_order": true,
+                "link_order": "https://docs.google.com/document/d/1YMdZantu8R07ygOYVycxltD3zLl6M854FHpLsqvzbj8/edit",
+                "link_localnews": "https://themissouritimes.com/coronavirus-in-missouri-which-counties-have-implemented-stay-at-home-rules/",
+                "place_fmt": "Platte County",
+                "population_fmt": "103,000",
+                "date_effective_fmt": "effective March 24 at 12:01 a.m."
+            },
+            {
+                "place_nyt_style": "Randolph County",
+                "geography": "county",
+                "state": "MO",
+                "order": "Stay at home",
+                "population": 24763,
+                "formal_order": true,
+                "link_order": "https://www.randolphcounty-mo.com/",
+                "link_localnews": "https://themissouritimes.com/coronavirus-in-missouri-which-counties-have-implemented-stay-at-home-rules/",
+                "place_fmt": "Randolph County",
+                "population_fmt": "25,000",
+                "date_effective_fmt": "effective March 25 at 8 a.m."
+            },
+            {
+                "place_nyt_style": "Ray County",
+                "geography": "county",
+                "state": "MO",
+                "order": "Stay at home",
+                "population": 22883,
+                "formal_order": true,
+                "link_order": "https://raycountymo.com/wp-content/uploads/2020/03/RayCounty-CourtOrder-032420.pdf",
+                "link_localnews": "https://themissouritimes.com/coronavirus-in-missouri-which-counties-have-implemented-stay-at-home-rules/",
+                "place_fmt": "Ray County",
+                "population_fmt": "23,000",
+                "date_effective_fmt": "effective March 25 at 12:01 a.m."
+            },
+            {
+                "place_nyt_style": "St. Louis County",
+                "geography": "county",
+                "state": "MO",
+                "order": "Stay at home",
+                "population": 999539,
+                "formal_order": true,
+                "link_order": "https://stlouisco.com/portals/8/docs/document%20library/CountyExecutive/Executive%20Orders/Stay%20at%20Home%20Order.pdf",
+                "link_localnews": "https://www.stltoday.com/lifestyles/health-med-fit/coronavirus/st-louis-and-st-louis-county-order-residents-to-stay/article_da7344c9-fabb-5e64-9d3f-3883bf1fc1f7.html",
+                "place_fmt": "St. Louis County",
+                "population_fmt": "1 million",
+                "date_effective_fmt": "effective March 23 at 12:01 a.m."
+            }
+        ],
+        "statename": "Missouri",
+        "blurb": "Residents in the Kansas City, St. Louis and St. Louis County areas are among those under instructions to stay at home. “I wish we did not have to do this,” Mayor Lyda Krewson of St. Louis said Saturday. “This situation will only get worse — much worse — if we don’t act right now.”",
+        "statewide": false
+    },
+    {
+        "key": "MT",
+        "values": [
+            {
+                "place_nyt_style": "Montana",
+                "geography": "state",
+                "state": "MT",
+                "order": "Stay at home",
+                "population": 1062305,
+                "formal_order": true,
+                "link_order": "https://covid19.mt.gov/Portals/223/Documents/Stay%20at%20Home%20Directive.pdf?ver=2020-03-26-173332-177",
+                "link_localnews": "https://helenair.com/news/state-and-regional/govt-and-politics/montana-sees-first-covid--death-residents-ordered-to-stay/article_f92d251e-cfe6-5e99-ab9f-0aa9dd433b91.html",
+                "place_fmt": "Statewide",
+                "population_fmt": "1.1 million",
+                "date_effective_fmt": "effective March 28 at 12:01 a.m."
+            }
+        ],
+        "statename": "Montana",
+        "blurb": "\"We cannot rebuild our economic strength without doing everything we can now to flatten the curve and slow the spread of this virus,\" Gov. Steve Bullock said. ",
+        "statewide": true
+    },
+    {
+        "key": "NH",
+        "values": [
+            {
+                "place_nyt_style": "New Hampshire",
+                "geography": "state",
+                "state": "NH",
+                "order": "Stay at home",
+                "population": 1356458,
+                "formal_order": false,
+                "link_order": "https://www.governor.nh.gov/news-media/emergency-orders/documents/emergency-order-17-1.pdf",
+                "link_localnews": "https://www.concordmonitor.com/Thursday-update-NH-covid-cases-disease-spread-33554702",
+                "place_fmt": "Statewide",
+                "population_fmt": "1.4 million",
+                "date_effective_fmt": "effective March 27 at 11:59 p.m."
+            }
+        ],
+        "statename": "New Hampshire",
+        "blurb": "Gov. Chris Sununu had earlier described a stay-at-home order as not a \"practical ask\" of residents, but later put one in place. \"We can't stress this enough — you should stay at your house unless absolutely necessary,\" he said. ",
+        "statewide": true
+    },
+    {
+        "key": "NJ",
+        "values": [
+            {
+                "place_nyt_style": "New Jersey",
+                "geography": "state",
+                "state": "NJ",
+                "order": "Stay at home",
+                "population": 8908520,
+                "formal_order": true,
+                "link_order": "https://nj.gov/infobank/eo/056murphy/pdf/EO-107.pdf",
+                "link_localnews": "https://www.nj.com/coronavirus/2020/03/new-jersey-lockdown-rules-what-residents-need-to-know-about-stay-at-home-order.html",
+                "place_fmt": "Statewide",
+                "population_fmt": "8.9 million",
+                "date_effective_fmt": "effective March 21 at 9 p.m."
+            }
+        ],
+        "statename": "New Jersey",
+        "blurb": "“We know the virus spreads through person-to-person contact, and the best way to prevent further exposure is to limit our public interactions,” Gov. Phil Murphy said.",
+        "statewide": true
+    },
+    {
+        "key": "NM",
+        "values": [
+            {
+                "place_nyt_style": "New Mexico",
+                "geography": "state",
+                "state": "NM",
+                "order": "Stay at home",
+                "population": 2095428,
+                "formal_order": true,
+                "link_order": "https://www.governor.state.nm.us/wp-content/uploads/2020/03/COVID-19-DOH-Order-fv.pdf",
+                "link_localnews": "https://www.abqjournal.com/1435599/lujan-grisham-to-announce-stay-at-home-instruction.html",
+                "place_fmt": "Statewide",
+                "population_fmt": "2.1 million",
+                "date_effective_fmt": "effective March 24 at 8 a.m."
+            }
+        ],
+        "statename": "New Mexico",
+        "blurb": "\n\nAddressing questions about whether she was issuing a shelter-in-place order, Gov. Michelle Lujan Grisham said that “the tantamount effect of what we’re doing is basically the same.” She added: “This is quite frankly an instruction to stay home.”",
+        "statewide": true
+    },
+    {
+        "key": "NY",
+        "values": [
+            {
+                "place_nyt_style": "New York",
+                "geography": "state",
+                "state": "NY",
+                "order": "Stay at home",
+                "population": 19542209,
+                "formal_order": false,
+                "link_order": "https://coronavirus.health.ny.gov/new-york-state-pause",
+                "link_localnews": "https://www.nytimes.com/article/what-is-shelter-in-place-coronavirus.html",
+                "place_fmt": "Statewide",
+                "population_fmt": "19.5 million",
+                "date_effective_fmt": "effective March 22 at 8 p.m."
+            }
+        ],
+        "statename": "New York",
+        "blurb": "Gov. Andrew M. Cuomo has shied away from the language of a shelter-in-place order, which he said evoked images of shooter situations or nuclear war. “Words matter,” the governor said, instead describing it as putting all of New York on pause. “This is the most drastic action we can take,” he said.",
+        "statewide": true
+    },
+    {
+        "key": "NC",
+        "values": [
+            {
+                "place_nyt_style": "North Carolina",
+                "geography": "state",
+                "state": "NC",
+                "order": "Stay at home",
+                "population": 10383620,
+                "formal_order": true,
+                "link_order": "https://twitter.com/NC_Governor/status/1243629131646078976?s=20",
+                "link_localnews": "https://www.newsobserver.com/news/coronavirus/article241469211.html",
+                "place_fmt": "Statewide",
+                "population_fmt": "10.4 million",
+                "date_effective_fmt": "effective March 30 at 5 p.m."
+            }
+        ],
+        "statename": "North Carolina",
+        "blurb": "A number of cities and counties in North Carolina had already ordered their residents to stay home, but Gov. Roy Cooper made it official statewide. \"Even if you don’t think you have to worry about yourself, consider our nurses, doctors, custodial staff & other hospital workers who will be stretched beyond their capacity if we are unable to slow the spread of this disease,\" he said on Twitter. ",
+        "statewide": true
+    },
+    {
+        "key": "OH",
+        "values": [
+            {
+                "place_nyt_style": "Ohio",
+                "geography": "state",
+                "state": "OH",
+                "order": "Stay at home",
+                "population": 11689442,
+                "formal_order": true,
+                "link_order": "https://content.govdelivery.com/attachments/OHOOD/2020/03/22/file_attachments/1407840/Stay%20Home%20Order.pdf",
+                "link_localnews": "https://www.dispatch.com/news/20200322/coronavirus-ohio-issues-stay-at-home-order-allows-only-essential-businesses-and-day-cares-at-6-children-per-room",
+                "place_fmt": "Statewide",
+                "population_fmt": "11.7 million",
+                "date_effective_fmt": "effective March 23 at 11:59 pm."
+            }
+        ],
+        "statename": "Ohio",
+        "blurb": "Gov. Mike DeWine has been notably aggressive in his response to the coronavirus, and Ohio was among the first wave of states to adopt this measure. “We haven’t faced an enemy like we are facing today in 102 years,” he said. “We are at war.”",
+        "statewide": true
+    },
+    {
+        "key": "OK",
+        "values": [
+            {
+                "place_nyt_style": "Norman",
+                "geography": "city",
+                "state": "OK",
+                "order": "Stay at home",
+                "population": 123471,
+                "formal_order": true,
+                "link_order": "https://static1.squarespace.com/static/5e73c3526ab9182890fd4c29/t/5e7a745761495f27e26b1e5c/1585083479590/Proclamation+2020-04.pdf",
+                "link_localnews": "https://oklahoman.com/article/5658480/coronavirus-in-oklahoma-norman-mayor-to-announce-shelter-in-place-order",
+                "place_fmt": "Norman",
+                "population_fmt": "123,000",
+                "date_effective_fmt": "effective March 25 at 11:59 p.m."
+            },
+            {
+                "place_nyt_style": "Oklahoma City",
+                "geography": "city",
+                "state": "OK",
+                "order": "Shelter in place",
+                "population": 649021,
+                "formal_order": true,
+                "link_order": "https://www.okc.gov/Home/Components/News/News/3321/18",
+                "link_localnews": "https://oklahoman.com/article/5658851/coronavirus-in-oklahoma-oklahoma-city-to-implement-shelter-in-place-order",
+                "place_fmt": "Oklahoma City",
+                "population_fmt": "649,000",
+                "date_effective_fmt": "effective March 28 at 11:59 p.m."
+            },
+            {
+                "place_nyt_style": "Tulsa",
+                "geography": "city",
+                "state": "OK",
+                "order": "Shelter in place",
+                "population": 400669,
+                "formal_order": true,
+                "link_order": "http://www.cityoftulsa.org/media/12617/2020-04.pdf",
+                "link_localnews": "https://www.tulsaworld.com/news/not-a-recommendation-mayor-g-t-bynum-issues-shelter-in/article_5d2fda2b-0b00-5119-80fd-a3f25e7cde81.html",
+                "place_fmt": "Tulsa",
+                "population_fmt": "401,000",
+                "date_effective_fmt": "effective March 28 at 11:59 p.m."
+            }
+        ],
+        "statename": "Oklahoma",
+        "blurb": "Gov. Kevin Stitt has told older and vulnerable people across Oklahoma to stay home, but mayors in the state's major cities, including Oklahoma City, Tulsa and Norman, ordered all residents to do so. \"We want to leave no doubt,\" Mayor David Holt of Oklahoma City said. \"The safest course of action during this public health crisis is to stay home.\"",
+        "statewide": false
+    },
+    {
+        "key": "OR",
+        "values": [
+            {
+                "place_nyt_style": "Oregon",
+                "geography": "state",
+                "state": "OR",
+                "order": "Stay at home",
+                "population": 4200000,
+                "formal_order": true,
+                "link_order": "https://govsite-assets.s3.amazonaws.com/jkAULYKcSh6DoDF8wBM0_EO%2020-12.pdf",
+                "link_localnews": "https://www.oregonlive.com/coronavirus/2020/03/its-a-matter-of-life-or-death-gov-kate-brown-begs-oregonians-to-stay-home-as-people-crowd-coast-gorge.html",
+                "place_fmt": "Statewide",
+                "population_fmt": "4.2 million",
+                "date_effective_fmt": "effective March 23"
+            }
+        ],
+        "statename": "Oregon",
+        "blurb": "Gov. Kate Brown took the action after seeing the state’s scenic trails and beaches packed with people over the weekend. “If you're still not sure about an activity, skip it,” she said. “Staying home will save lives.”",
+        "statewide": true
+    },
+    {
+        "key": "PA",
+        "values": [
+            {
+                "place_nyt_style": "Allegheny County",
+                "geography": "county",
+                "state": "PA",
+                "order": "Stay at home",
+                "population": 1229605,
+                "formal_order": true,
+                "link_order": "https://www.governor.pa.gov/wp-content/uploads/2020/03/03.23.20-TWW-COVID-19-Stay-at-Home-Order.pdf",
+                "link_localnews": "https://www.post-gazette.com/local/region/2020/03/23/Wolf-to-issue-stay-at-home-order-for-hardest-hit-counties/stories/202003230080",
+                "place_fmt": "Allegheny County",
+                "population_fmt": "1.2 million",
+                "date_effective_fmt": "effective March 23 at 8 p.m."
+            },
+            {
+                "place_nyt_style": "Beaver County",
+                "geography": "county",
+                "state": "PA",
+                "order": "Stay at home",
+                "population": 164742,
+                "formal_order": true,
+                "link_order": "https://www.governor.pa.gov/wp-content/uploads/2020/03/20200328-GOV-Stay-at-Home-Order-Amendment.pdf",
+                "link_localnews": "https://www.timesonline.com/news/20200328/wolf-expands-stay-at-home-order-to-beaver-county-as-it-reaches-22-coronavirus-cases",
+                "place_fmt": "Beaver County",
+                "population_fmt": "165,000",
+                "date_effective_fmt": "effective March 28 at 8 p.m."
+            },
+            {
+                "place_nyt_style": "Berks County",
+                "geography": "county",
+                "state": "PA",
+                "order": "Stay at home",
+                "population": 420152,
+                "formal_order": true,
+                "link_order": "https://www.governor.pa.gov/wp-content/uploads/2020/03/20200327-GOV-Stay-at-Home-Order-Amended.pdf",
+                "link_localnews": "https://www.nbcphiladelphia.com/news/local/pa-stay-at-home-order-expands-to-berks-8-other-counties/2342899/",
+                "place_fmt": "Berks County",
+                "population_fmt": "420,000",
+                "date_effective_fmt": "effective March 27 at 8 p.m."
+            },
+            {
+                "place_nyt_style": "Bucks County",
+                "geography": "county",
+                "state": "PA",
+                "order": "Stay at home",
+                "population": 628195,
+                "formal_order": true,
+                "link_order": "https://www.governor.pa.gov/wp-content/uploads/2020/03/03.23.20-TWW-COVID-19-Stay-at-Home-Order.pdf",
+                "link_localnews": "https://www.phillytrib.com/news/health/coronavirus/wolf-issues-stay-at-home-order-for-hardest-hit-counties/article_61becbf7-a7c1-5d43-b944-617aeec769c8.html",
+                "place_fmt": "Bucks County",
+                "population_fmt": "628,000",
+                "date_effective_fmt": "effective March 23 at 8 p.m."
+            },
+            {
+                "place_nyt_style": "Butler County",
+                "geography": "county",
+                "state": "PA",
+                "order": "Stay at home",
+                "population": 187888,
+                "formal_order": true,
+                "link_order": "https://www.governor.pa.gov/wp-content/uploads/2020/03/20200327-GOV-Stay-at-Home-Order-Amended.pdf",
+                "link_localnews": "http://www.butlereagle.com/article/20200327/NEWS12/703279916",
+                "place_fmt": "Butler County",
+                "population_fmt": "188,000",
+                "date_effective_fmt": "effective March 27 at 8 p.m."
+            },
+            {
+                "place_nyt_style": "Centre County",
+                "geography": "county",
+                "state": "PA",
+                "order": "Stay at home",
+                "population": 162805,
+                "formal_order": true,
+                "link_order": "https://www.governor.pa.gov/wp-content/uploads/2020/03/20200328-GOV-Stay-at-Home-Order-Amendment.pdf",
+                "link_localnews": "https://www.centredaily.com/news/coronavirus/article241587781.html",
+                "place_fmt": "Centre County",
+                "population_fmt": "163,000",
+                "date_effective_fmt": "effective March 28 at 8 p.m."
+            },
+            {
+                "place_nyt_style": "Chester County",
+                "geography": "county",
+                "state": "PA",
+                "order": "Stay at home",
+                "population": 522046,
+                "formal_order": true,
+                "link_order": "https://www.governor.pa.gov/wp-content/uploads/2020/03/03.23.20-TWW-COVID-19-Stay-at-Home-Order.pdf",
+                "link_localnews": "https://www.phillytrib.com/news/health/coronavirus/wolf-issues-stay-at-home-order-for-hardest-hit-counties/article_61becbf7-a7c1-5d43-b944-617aeec769c8.html",
+                "place_fmt": "Chester County",
+                "population_fmt": "522,000",
+                "date_effective_fmt": "effective March 23 at 8 p.m."
+            },
+            {
+                "place_nyt_style": "Delaware County",
+                "geography": "county",
+                "state": "PA",
+                "order": "Stay at home",
+                "population": 564751,
+                "formal_order": true,
+                "link_order": "https://www.governor.pa.gov/wp-content/uploads/2020/03/03.23.20-TWW-COVID-19-Stay-at-Home-Order.pdf",
+                "link_localnews": "https://www.phillytrib.com/news/health/coronavirus/wolf-issues-stay-at-home-order-for-hardest-hit-counties/article_61becbf7-a7c1-5d43-b944-617aeec769c8.html",
+                "place_fmt": "Delaware County",
+                "population_fmt": "565,000",
+                "date_effective_fmt": "effective March 23 at 8 p.m."
+            },
+            {
+                "place_nyt_style": "Erie County",
+                "geography": "county",
+                "state": "PA",
+                "order": "Stay at home",
+                "population": 272061,
+                "formal_order": true,
+                "link_order": "https://www.governor.pa.gov/wp-content/uploads/2020/03/SOH-Stay-at-Home-Order-Amdt-3-24-20.pdf",
+                "link_localnews": "https://www.yourerie.com/health/coronavirus/breaking-stay-at-home-order-issued-for-erie-county/",
+                "place_fmt": "Erie County",
+                "population_fmt": "272,000",
+                "date_effective_fmt": "effective March 24 at 8 p.m."
+            },
+            {
+                "place_nyt_style": "Lackawanna County",
+                "geography": "county",
+                "state": "PA",
+                "order": "Stay at home",
+                "population": 210793,
+                "formal_order": true,
+                "link_order": "https://www.governor.pa.gov/wp-content/uploads/2020/03/20200327-GOV-Stay-at-Home-Order-Amended.pdf",
+                "link_localnews": "https://www.pahomepage.com/top-stories/luzerne-lackawanna-added-to-stay-at-home-order/",
+                "place_fmt": "Lackawanna County",
+                "population_fmt": "211,000",
+                "date_effective_fmt": "effective March 27 at 8 p.m."
+            },
+            {
+                "place_nyt_style": "Lancaster County",
+                "geography": "county",
+                "state": "PA",
+                "order": "Stay at home",
+                "population": 543557,
+                "formal_order": true,
+                "link_order": "https://www.governor.pa.gov/wp-content/uploads/2020/03/20200327-GOV-Stay-at-Home-Order-Amended.pdf",
+                "link_localnews": "https://lancasteronline.com/news/local/wolf-adding-lancaster-york-other-counties-to-stay-at-home/article_54c140b2-7040-11ea-a153-97d8b3336ed1.html",
+                "place_fmt": "Lancaster County",
+                "population_fmt": "544,000",
+                "date_effective_fmt": "effective March 27 at 8 p.m."
+            },
+            {
+                "place_nyt_style": "Lehigh County",
+                "geography": "county",
+                "state": "PA",
+                "order": "Stay at home",
+                "population": 368100,
+                "formal_order": true,
+                "link_order": "https://www.facebook.com/permalink.php?story_fbid=3142158555802666&id=148439135174638",
+                "link_localnews": "https://www.lehighvalleylive.com/coronavirus/2020/03/pennsylvania-stay-at-home-order-expected-in-lehigh-valley-as-coronavirus-spreads.html",
+                "place_fmt": "Lehigh County",
+                "population_fmt": "368,000",
+                "date_effective_fmt": "effective March 25 at 8 p.m."
+            },
+            {
+                "place_nyt_style": "Luzerne County",
+                "geography": "county",
+                "state": "PA",
+                "order": "Stay at home",
+                "population": 317646,
+                "formal_order": true,
+                "link_order": "https://www.governor.pa.gov/wp-content/uploads/2020/03/20200327-GOV-Stay-at-Home-Order-Amended.pdf",
+                "link_localnews": "https://www.pahomepage.com/top-stories/luzerne-lackawanna-added-to-stay-at-home-order/",
+                "place_fmt": "Luzerne County",
+                "population_fmt": "318,000",
+                "date_effective_fmt": "effective March 27 at 8 p.m."
+            },
+            {
+                "place_nyt_style": "Monroe County",
+                "geography": "county",
+                "state": "PA",
+                "order": "Stay at home",
+                "population": 169507,
+                "formal_order": true,
+                "link_order": "https://www.governor.pa.gov/wp-content/uploads/2020/03/03.23.20-TWW-COVID-19-Stay-at-Home-Order.pdf",
+                "link_localnews": "https://www.poconorecord.com/news/20200323/wolf-issues-stay-at-home-order-for-monroe-and-other-counties",
+                "place_fmt": "Monroe County",
+                "population_fmt": "170,000",
+                "date_effective_fmt": "effective March 23 at 8 p.m."
+            },
+            {
+                "place_nyt_style": "Montgomery County",
+                "geography": "county",
+                "state": "PA",
+                "order": "Stay at home",
+                "population": 828604,
+                "formal_order": true,
+                "link_order": "https://www.governor.pa.gov/wp-content/uploads/2020/03/03.23.20-TWW-COVID-19-Stay-at-Home-Order.pdf",
+                "link_localnews": "https://www.phillytrib.com/news/health/coronavirus/wolf-issues-stay-at-home-order-for-hardest-hit-counties/article_61becbf7-a7c1-5d43-b944-617aeec769c8.html",
+                "place_fmt": "Montgomery County",
+                "population_fmt": "829,000",
+                "date_effective_fmt": "effective March 23 at 8 p.m."
+            },
+            {
+                "place_nyt_style": "Northampton County",
+                "geography": "county",
+                "state": "PA",
+                "order": "Stay at home",
+                "population": 304807,
+                "formal_order": true,
+                "link_order": "https://www.northamptoncounty.org/CTYEXEC/Documents/032520%20PR%20Stay%20at%20Home%20Order.pdf",
+                "link_localnews": "https://www.mcall.com/coronavirus/mc-nws-pa-statewide-wednesday-cases-20200325-6ecetijwzvd3bcpqhzj27uxy7e-story.html",
+                "place_fmt": "Northampton County",
+                "population_fmt": "305,000",
+                "date_effective_fmt": "effective March 25 at 8 p.m."
+            },
+            {
+                "place_nyt_style": "Philadelphia County",
+                "geography": "county",
+                "state": "PA",
+                "order": "Stay at home",
+                "population": 1584138,
+                "formal_order": true,
+                "link_order": "https://www.governor.pa.gov/wp-content/uploads/2020/03/03.23.20-TWW-COVID-19-Stay-at-Home-Order.pdf",
+                "link_localnews": "https://www.phillytrib.com/news/health/coronavirus/wolf-issues-stay-at-home-order-for-hardest-hit-counties/article_61becbf7-a7c1-5d43-b944-617aeec769c8.html",
+                "place_fmt": "Philadelphia County",
+                "population_fmt": "1.6 million",
+                "date_effective_fmt": "effective March 23 at 8 p.m."
+            },
+            {
+                "place_nyt_style": "Pike County",
+                "geography": "county",
+                "state": "PA",
+                "order": "Stay at home",
+                "population": 55933,
+                "formal_order": true,
+                "link_order": "https://www.governor.pa.gov/wp-content/uploads/2020/03/20200327-GOV-Stay-at-Home-Order-Amended.pdf",
+                "link_localnews": "https://riverreporter.com/stories/wolf-expands-stay-at-home-order-to-include-wayne-and-pike-counties,36727",
+                "place_fmt": "Pike County",
+                "population_fmt": "56,000",
+                "date_effective_fmt": "effective March 27 at 8 p.m."
+            },
+            {
+                "place_nyt_style": "Washington County",
+                "geography": "county",
+                "state": "PA",
+                "order": "Stay at home",
+                "population": 207346,
+                "formal_order": true,
+                "link_order": "https://www.governor.pa.gov/wp-content/uploads/2020/03/20200328-GOV-Stay-at-Home-Order-Amendment.pdf",
+                "link_localnews": "https://observer-reporter.com/series/coronavirus/governor-extends-stay-at-home-order-to-include-washington-county/article_b5185904-7113-11ea-aa50-e7ae6ffbf72a.html",
+                "place_fmt": "Washington County",
+                "population_fmt": "207,000",
+                "date_effective_fmt": "effective March 28 at 8 p.m."
+            },
+            {
+                "place_nyt_style": "Wayne County",
+                "geography": "county",
+                "state": "PA",
+                "order": "Stay at home",
+                "population": 51276,
+                "formal_order": true,
+                "link_order": "https://www.governor.pa.gov/wp-content/uploads/2020/03/20200327-GOV-Stay-at-Home-Order-Amended.pdf",
+                "link_localnews": "https://riverreporter.com/stories/wolf-expands-stay-at-home-order-to-include-wayne-and-pike-counties,36727",
+                "place_fmt": "Wayne County",
+                "population_fmt": "51,000",
+                "date_effective_fmt": "effective March 27 at 8 p.m."
+            },
+            {
+                "place_nyt_style": "Westmoreland County",
+                "geography": "county",
+                "state": "PA",
+                "order": "Stay at home",
+                "population": 350611,
+                "formal_order": true,
+                "link_order": "https://www.governor.pa.gov/wp-content/uploads/2020/03/20200327-GOV-Stay-at-Home-Order-Amended.pdf",
+                "link_localnews": "https://pittsburgh.cbslocal.com/2020/03/28/butler-westmoreland-coronavirus-orders/",
+                "place_fmt": "Westmoreland County",
+                "population_fmt": "351,000",
+                "date_effective_fmt": "effective March 27 at 8 p.m."
+            },
+            {
+                "place_nyt_style": "York County",
+                "geography": "county",
+                "state": "PA",
+                "order": "Stay at home",
+                "population": 448273,
+                "formal_order": true,
+                "link_order": "https://www.governor.pa.gov/wp-content/uploads/2020/03/20200327-GOV-Stay-at-Home-Order-Amended.pdf",
+                "link_localnews": "https://www.wgal.com/article/lancaster-york-county-stay-at-home-order/31958525#",
+                "place_fmt": "York County",
+                "population_fmt": "448,000",
+                "date_effective_fmt": "effective March 27 at 8 p.m."
+            }
+        ],
+        "statename": "Pennsylvania",
+        "blurb": "Gov. Tom Wolf has issued stay-at-home orders for more than 20 counties in the state, including the regions around Philadelphia and Pittsburgh. “Residents must stay home unless someone’s life depends on leaving,” he said. ",
+        "statewide": false
+    },
+    {
+        "key": "PR",
+        "values": [
+            {
+                "place_nyt_style": "Puerto Rico",
+                "geography": "territory",
+                "state": "PR",
+                "order": "Curfew",
+                "population": 3195153,
+                "formal_order": true,
+                "link_order": "https://www.scribd.com/document/451785912/Orden-ejecutiva-de-la-gobernadora-para-combatir-el-coronavirus#from_embed",
+                "link_localnews": "https://www.elnuevodia.com/noticias/locales/nota/wandavazquezdecretatoquedequedaparatodopuertoricoparacontenerelcoronavirus-2552934/",
+                "place_fmt": "Across entire territory",
+                "population_fmt": "3.2 million",
+                "date_effective_fmt": "effective March 15 at 6 p.m."
+            }
+        ],
+        "statename": "Puerto Rico",
+        "blurb": "Gov. Wanda Vázquez issued an order imposing a nightly curfew and allowing people to leave their homes during the day only to buy groceries or medicine, go to the bank, attend medical appointments, tend to caregiving responsibilities or work in businesses deemed essential. “All citizens will have to stay home to stop the spread of this virus,” she said.",
+        "statewide": true
+    },
+    {
+        "key": "RI",
+        "values": [
+            {
+                "place_nyt_style": "Rhode Island",
+                "geography": "state",
+                "state": "RI",
+                "order": "Stay at home",
+                "population": 1057315,
+                "formal_order": true,
+                "link_order": "http://governor.ri.gov/documents/orders/Executive-Order-20-13.pdf",
+                "link_localnews": "https://www.providencejournal.com/news/20200328/ri-tightens-restrictions-after-2-virus-deaths",
+                "place_fmt": "Statewide",
+                "population_fmt": "1.1 million",
+                "date_effective_fmt": "effective March 28"
+            }
+        ],
+        "statename": "Rhode Island",
+        "blurb": "Gov. Gina Raimondo issued a stay-at-home order in a state that has gone to great lengths to protect itself from outsiders, especially people fleeing New York City. She said a surge in cases was inevitable. \"This is going to get very real very fast for all of us,\" she said. ",
+        "statewide": true
+    },
+    {
+        "key": "SC",
+        "values": [
+            {
+                "place_nyt_style": "Charleston",
+                "geography": "city",
+                "state": "SC",
+                "order": "Stay at home",
+                "population": 136208,
+                "formal_order": true,
+                "link_order": "https://www.charleston-sc.gov/DocumentCenter/View/26251/Emergency-Ordinance-Stay-at-Home",
+                "link_localnews": "https://www.postandcourier.com/health/covid19/charleston-city-council-approves-stay-at-home-ordinance-with-broad/article_0a29c94e-6de7-11ea-84b1-c3369b331f03.html",
+                "place_fmt": "Charleston",
+                "population_fmt": "136,000",
+                "date_effective_fmt": "effective March 26 at 12:01 a.m."
+            },
+            {
+                "place_nyt_style": "Columbia",
+                "geography": "city",
+                "state": "SC",
+                "order": "Stay at home",
+                "population": 133451,
+                "formal_order": true,
+                "link_order": "http://columbiasc.net/headlines/03-30-2020/stayhome_staysafeordinance",
+                "link_localnews": "https://www.thestate.com/news/coronavirus/article241555256.html",
+                "place_fmt": "Columbia",
+                "population_fmt": "133,000",
+                "date_effective_fmt": "effective March 29 at 12:01 a.m."
+            }
+        ],
+        "statename": "South Carolina",
+        "blurb": "Charleston and Columbia are among the cities ordering residents to stay home. \"We must now take more dramatic action,\" Mayor John J. Tecklenburg of Charleston said, \"while there is still time to save thousands of lives.\" ",
+        "statewide": false
+    },
+    {
+        "key": "TN",
+        "values": [
+            {
+                "place_nyt_style": "Tennessee",
+                "geography": "state",
+                "state": "TN",
+                "order": "Stay at home",
+                "population": 6770010,
+                "formal_order": true,
+                "link_order": "https://publications.tnsosfiles.com/pub/execorders/exec-orders-lee22.pdf",
+                "link_localnews": "https://www.tennessean.com/story/news/health/2020/03/30/tennessee-governor-bill-lee-stay-at-home-order-to-stop-coronavirus/2937429001/",
+                "place_fmt": "Statewide",
+                "population_fmt": "6.8 million",
+                "date_effective_fmt": "effective March 31 at 11:59 p.m."
+            }
+        ],
+        "statename": "Tennessee",
+        "blurb": "Residents in the Nashville and Memphis areas were already under instructions to stay at home as much as possible when Gov. Bill Lee issued statewide guidelines urging everyone to do so. \"We need you to do that to protect the lives of your neighbors,\" he said.",
+        "statewide": true
+    },
+    {
+        "key": "TX",
+        "values": [
+            {
+                "place_nyt_style": "Amarillo",
+                "geography": "city",
+                "state": "TX",
+                "order": "Stay at home",
+                "population": 199924,
+                "formal_order": true,
+                "link_order": "https://www.amarillo.gov/Home/Components/News/News/910/16",
+                "link_localnews": "https://www.kcbd.com/2020/03/30/mayor-ginger-nelson-issues-shelter-in-place-order-amarillo/",
+                "place_fmt": "Amarillo",
+                "population_fmt": "200,000",
+                "date_effective_fmt": "effective March 30 at 11:59 p.m."
+            },
+            {
+                "place_nyt_style": "Bell County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Shelter in place",
+                "population": 355642,
+                "formal_order": true,
+                "link_order": "https://www.bellcountytx.com/public%20notices/Bell%20County%20Disaster%20Declaration%20Directive%20_3%20Stay%20Home%20Stay%20Safe.pdf",
+                "link_localnews": "https://www.kwtx.com/content/news/Bell-County-officials-issue-shelter-in-place-order-569036731.html",
+                "place_fmt": "Bell County",
+                "population_fmt": "356,000",
+                "date_effective_fmt": "effective March 23 at 11:59 p.m."
+            },
+            {
+                "place_nyt_style": "Bexar County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Stay at home",
+                "population": 1986049,
+                "formal_order": true,
+                "link_order": "https://www.bexar.org/DocumentCenter/View/26253/Executive-Order-NW-03---Judge-Nelson-Wolff---March-23-2020?bidId=",
+                "link_localnews": "https://www.expressnews.com/news/local/article/Shelter-in-place-order-to-slow-coronavirus-15151183.php",
+                "place_fmt": "Bexar County",
+                "population_fmt": "2 million",
+                "date_effective_fmt": "effective March 24 at 11:59 p.m."
+            },
+            {
+                "place_nyt_style": "Brazoria County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Stay at home",
+                "population": 370200,
+                "formal_order": true,
+                "link_order": "https://www.brazoriacountytx.gov/home/showdocument?id=11835",
+                "link_localnews": "https://www.click2houston.com/health/2020/03/26/brazoria-county-joins-suit-issues-stay-safe-at-home-order-for-residents/",
+                "place_fmt": "Brazoria County",
+                "population_fmt": "370,000",
+                "date_effective_fmt": "effective March 26 at 6 p.m."
+            },
+            {
+                "place_nyt_style": "Cameron County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Shelter in place",
+                "population": 423908,
+                "formal_order": true,
+                "link_order": "https://www.cameroncounty.us/wp-content/uploads/2020/03/03.23.2020-Third-Supplemental-Emergency-Management-Order-with-Countywide-Shelter-in-Place.pdf",
+                "link_localnews": "https://www.themonitor.com/2020/03/23/cameron-county-orders-residents-shelter-place/",
+                "place_fmt": "Cameron County",
+                "population_fmt": "424,000",
+                "date_effective_fmt": "effective March 25 at 12:01 a.m."
+            },
+            {
+                "place_nyt_style": "Chambers County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Stay at home",
+                "population": 42454,
+                "formal_order": true,
+                "link_order": "https://www.co.chambers.tx.us/upload/page/0138/Executive%20Order%20-%20Stay%20Safe%20-%203-24-20.pdf",
+                "link_localnews": "https://kfdm.com/news/local/breaking-chambers-county-issues-stay-safe-order-takes-effect-at-1159-pm-tuesday",
+                "place_fmt": "Chambers County",
+                "population_fmt": "42,000",
+                "date_effective_fmt": "effective March 24 at 11:59 p.m."
+            },
+            {
+                "place_nyt_style": "Collin County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Stay at home",
+                "population": 1005146,
+                "formal_order": true,
+                "link_order": "https://dfw.cbslocal.com/wp-content/uploads/sites/15909545/2020/03/20200324-Chris-Hill-Executive-Order-FINAL-1.pdf",
+                "link_localnews": "https://www.dallasnews.com/news/public-health/2020/03/24/all-workers-are-essential-collin-county-orders-residents-to-stay-home-but-businesses-can-remain-open/",
+                "place_fmt": "Collin County",
+                "population_fmt": "1 million",
+                "date_effective_fmt": "effective March 24"
+            },
+            {
+                "place_nyt_style": "Dallas County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Shelter in place",
+                "population": 2552213,
+                "formal_order": true,
+                "link_order": "https://www.dallascounty.org/Assets/uploads/docs/judge-jenkins/covid-19/03232020-AmendedOrder.pdf",
+                "link_localnews": "https://www.dallasnews.com/news/public-health/2020/03/22/dallas-county-residents-ordered-to-stay-home-as-new-shelter-in-place-rules-are-put-in-place/",
+                "place_fmt": "Dallas County",
+                "population_fmt": "2.6 million",
+                "date_effective_fmt": "effective March 23 at 11:59 p.m."
+            },
+            {
+                "place_nyt_style": "Denton County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Stay at home",
+                "population": 859064,
+                "formal_order": true,
+                "link_order": "https://dentoncounty.gov/-/media/PDFs/PressRelease/New-mandates-preserve-public-health-safety/3-24-2020-Joint-City-Denton-County-News-Release.pdf",
+                "link_localnews": "https://dentonrc.com/coronavirus_outbreak/staying-at-home-denton-county-seeking-compliance-before-enforcement/article_8775fb31-536b-52b2-be49-693502c92fa8.html",
+                "place_fmt": "Denton County",
+                "population_fmt": "859,000",
+                "date_effective_fmt": "effective March 25 at 11:59 p.m."
+            },
+            {
+                "place_nyt_style": "El Paso County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Stay at home",
+                "population": 840758,
+                "formal_order": true,
+                "link_order": "https://www.facebook.com/elpasotexasgov/videos/206659693763552/",
+                "link_localnews": "https://www.elpasotimes.com/story/news/2020/03/24/el-paso-considering-shelter-in-place-to-slow-coronavirus/2905827001/",
+                "place_fmt": "El Paso County",
+                "population_fmt": "841,000",
+                "date_effective_fmt": "effective March 24 at 11:59 p.m."
+            },
+            {
+                "place_nyt_style": "Ellis County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Stay at home",
+                "population": 179436,
+                "formal_order": true,
+                "link_order": "https://co.ellis.tx.us/DocumentCenter/View/11040/Ellis-County-Stay-Home-Stay-Safe-Order",
+                "link_localnews": "https://www.nbcdfw.com/news/coronavirus/ellis-county-approves-a-stay-home-stay-safe-order/2338222/",
+                "place_fmt": "Ellis County",
+                "population_fmt": "179,000",
+                "date_effective_fmt": "effective March 25 at 11:59 p.m."
+            },
+            {
+                "place_nyt_style": "Fort Bend County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Stay at home",
+                "population": 787858,
+                "formal_order": true,
+                "link_order": "https://www.facebook.com/judgekpgeorge/photos/a.222211547836693/2996369510420869/?type=1&theater",
+                "link_localnews": "https://www.khou.com/article/news/health/coronavirus/coronavirus-fort-bend-county-issues-stay-at-home-order/285-27f60115-23f4-4f74-a1b8-427b9b1aabf2",
+                "place_fmt": "Fort Bend County",
+                "population_fmt": "788,000",
+                "date_effective_fmt": "effective March 25 at 12:01 a.m."
+            },
+            {
+                "place_nyt_style": "Galveston County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Stay at home",
+                "population": 337890,
+                "formal_order": true,
+                "link_order": "https://bloximages.newyork1.vip.townnews.com/galvnews.com/content/tncms/assets/v3/editorial/6/ec/6ec44f2e-f367-5297-b1b2-7c672eac7a3e/5e793e0abac4f.pdf.pdf",
+                "link_localnews": "https://www.houstonpublicmedia.org/articles/news/health-science/coronavirus/2020/03/24/365034/galveston-county-orders-residents-to-stay-at-home/",
+                "place_fmt": "Galveston County",
+                "population_fmt": "338,000",
+                "date_effective_fmt": "effective March 24 at 11:59 p.m."
+            },
+            {
+                "place_nyt_style": "Gregg County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Shelter in place",
+                "population": 123707,
+                "formal_order": true,
+                "link_order": "https://www.longviewtexas.gov/4007/Shelter-in-Place-FAQs",
+                "link_localnews": "https://www.kltv.com/2020/03/25/longview-orders-mandatory-shelter-in-place-order-after-more-cases-confirmed/",
+                "place_fmt": "Gregg County",
+                "population_fmt": "124,000",
+                "date_effective_fmt": "effective March 26 at 11:59 p.m."
+            },
+            {
+                "place_nyt_style": "Harris County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Stay at home",
+                "population": 4698619,
+                "formal_order": true,
+                "link_order": "https://assets.documentcloud.org/documents/6818483/Harris-County-Stay-At-Home-Order.pdf",
+                "link_localnews": "https://www.houstonchronicle.com/news/houston-texas/houston/article/what-is-a-stay-at-home-order-harris-county-covid19-15153512.php",
+                "place_fmt": "Harris County",
+                "population_fmt": "4.7 million",
+                "date_effective_fmt": "effective March 24 at 11:59 p.m."
+            },
+            {
+                "place_nyt_style": "Hays County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Stay at home",
+                "population": 222631,
+                "formal_order": true,
+                "link_order": "https://hayscountytx.com/download/commissioners_court/county_judge/COVID19_3rd_Order_StayatHome.WorkSafe_Hays-County_March-25-2020_2.pdf",
+                "link_localnews": "https://www.statesman.com/news/20200325/hays-countys-stay-at-home-order-to-begin-thursday-night",
+                "place_fmt": "Hays County",
+                "population_fmt": "223,000",
+                "date_effective_fmt": "effective March 26 at 11 p.m."
+            },
+            {
+                "place_nyt_style": "Hildalgo County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Shelter at home",
+                "population": 865939,
+                "formal_order": true,
+                "link_order": "https://www.hidalgocounty.us/DocumentCenter/View/36744/03252020---Hidalgo-County-Judge-Richard-F-Cortez-Issues-Shelter-At-Home-Order",
+                "link_localnews": "https://valleycentral.com/news/local/shelter-in-place-ordered-in-hidalgo-county",
+                "place_fmt": "Hildalgo County",
+                "population_fmt": "866,000",
+                "date_effective_fmt": "effective March 26 at 11:59 p.m."
+            },
+            {
+                "place_nyt_style": "Hunt County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Shelter in place",
+                "population": 96493,
+                "formal_order": true,
+                "link_order": "http://www.huntcounty.net/upload/page/9857/docs/Disaster%20Resolution%20STAY%20IN%20PLACE.pdf",
+                "link_localnews": "https://www.nbcdfw.com/news/coronavirus/hunt-county-approves-shelter-in-place-order/2337166/",
+                "place_fmt": "Hunt County",
+                "population_fmt": "96,000",
+                "date_effective_fmt": "effective March 24 at 11:59 p.m."
+            },
+            {
+                "place_nyt_style": "Kaufman County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Shelter in place",
+                "population": 128622,
+                "formal_order": true,
+                "link_order": "https://drive.google.com/file/d/14ck2TCbS94GRIL2mwmbxndcrSXLtzcsJ/view",
+                "link_localnews": "http://www.kaufmanherald.com/around_town/article_2a902e38-6e11-11ea-a9bc-630c9edc0c28.html",
+                "place_fmt": "Kaufman County",
+                "population_fmt": "129,000",
+                "date_effective_fmt": "effective March 25 at 11:59 p.m."
+            },
+            {
+                "place_nyt_style": "Liberty County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Stay at home",
+                "population": 86323,
+                "formal_order": true,
+                "link_order": "https://newtools.cira.state.tx.us/upload/page/4833/docs/ExecutiveOrder.StaySafeEmergencyMeasures.3.24.2020.pdf",
+                "link_localnews": "https://www.chron.com/neighborhood/cleveland/news/article/Liberty-County-judge-asks-residents-to-stay-at-15157295.php",
+                "place_fmt": "Liberty County",
+                "population_fmt": "86,000",
+                "date_effective_fmt": "effective March 24 at 11:59 p.m."
+            },
+            {
+                "place_nyt_style": "McLennan County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Shelter in place",
+                "population": 254607,
+                "formal_order": true,
+                "link_order": "http://co.mclennan.tx.us/DocumentCenter/View/10097/Amended-Order-Directing-All-Individuals-to-Shelter-at-Their-Place-of-Residence-PDF---ADA-032420",
+                "link_localnews": "https://www.wacotrib.com/news/government/waco-mclennan-county-clarify-align-shelter-in-place-orders/article_6cdbbce5-fb8b-551a-80a9-22582ca22ef5.html",
+                "place_fmt": "McLennan County",
+                "population_fmt": "255,000",
+                "date_effective_fmt": "effective March 23 at 11:59 p.m."
+            },
+            {
+                "place_nyt_style": "Nacogdoches County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Stay at home",
+                "population": 65711,
+                "formal_order": true,
+                "link_order": "https://www.ci.nacogdoches.tx.us/DocumentCenter/View/4574/County-Amended-Disaster-Declaration-03292020",
+                "link_localnews": "https://www.cbs19.tv/article/news/health/coronavirus/nacogdoches-county-issues-stay-at-home-order/501-99a96a52-9452-44c0-8d51-567c998861bd",
+                "place_fmt": "Nacogdoches County",
+                "population_fmt": "66,000",
+                "date_effective_fmt": "effective March 30 at 12 p.m."
+            },
+            {
+                "place_nyt_style": "Nueces County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Stay at home",
+                "population": 362265,
+                "formal_order": true,
+                "link_order": "https://www.nuecesco.com/Home/ShowDocument?id=24936",
+                "link_localnews": "https://www.caller.com/story/news/local/2020/03/25/nueces-county-coronavirus-response-stay-at-home-order-covid-19-cases-rise-texas/2909327001/",
+                "place_fmt": "Nueces County",
+                "population_fmt": "362,000",
+                "date_effective_fmt": "effective March 26 at 11:59 p.m."
+            },
+            {
+                "place_nyt_style": "Polk County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Stay at home",
+                "population": 50031,
+                "formal_order": true,
+                "link_order": "https://www.co.polk.tx.us/upload/page/3552/Polk%20County%20Executive%20Order%20-%20Order%20to%20Stay%20Home.pdf",
+                "link_localnews": "https://www.cbs19.tv/article/news/health/coronavirus/polk-county-issues-stay-at-home-order/501-2530cfd8-0825-41e4-a703-150a1f85dcb7",
+                "place_fmt": "Polk County",
+                "population_fmt": "50,000",
+                "date_effective_fmt": "effective March 27 at 11:59 p.m."
+            },
+            {
+                "place_nyt_style": "Robertson County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Shelter in place",
+                "population": 17284,
+                "formal_order": true,
+                "link_order": "https://www.co.robertson.tx.us/upload/page/5864/docs/Robertson%20County%20Order%20-%20Shelter%20in%20Place.pdf",
+                "link_localnews": "https://www.kwtx.com/content/news/Another-area-county-issues-shelter-in-place-order-569094801.html",
+                "place_fmt": "Robertson County",
+                "population_fmt": "17,000",
+                "date_effective_fmt": "effective March 25 at 9 p.m."
+            },
+            {
+                "place_nyt_style": "Rockwall County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Stay at home",
+                "population": 100657,
+                "formal_order": true,
+                "link_order": "https://bloximages.chicago2.vip.townnews.com/roysecityheraldbanner.com/content/tncms/assets/v3/editorial/d/e2/de2ceb7e-6e12-11ea-b941-ff1057cf3341/5e7a75ab9ca0c.file.pdf",
+                "link_localnews": "https://www.roysecityheraldbanner.com/news/rockwall-county-issues-stay-at-home-order-in-response-to/article_b20d4fa2-6e12-11ea-b954-332a346623ac.html",
+                "place_fmt": "Rockwall County",
+                "population_fmt": "101,000",
+                "date_effective_fmt": "effective March 24 at 11:59 p.m."
+            },
+            {
+                "place_nyt_style": "San Jacinto County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Stay at home",
+                "population": 28719,
+                "formal_order": true,
+                "link_order": "http://www.co.san-jacinto.tx.us/upload/page/6905/EMERGENCY%20ORDER%20COVID-19.pdf",
+                "link_localnews": "https://www.khou.com/article/news/health/coronavirus/coronavirus-texas-counties-stay-at-home-orders/285-c4b0f79b-90ec-48c1-bb84-bf4b9d7cc0d4",
+                "place_fmt": "San Jacinto County",
+                "population_fmt": "29,000",
+                "date_effective_fmt": "effective March 25"
+            },
+            {
+                "place_nyt_style": "Scurry County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Shelter in place",
+                "population": 16866,
+                "formal_order": false,
+                "link_order": "http://www.co.scurry.tx.us/upload/page/7080/Stay%20Home%20Order%20Signed.pdf",
+                "link_localnews": "https://www.bigcountryhomepage.com/health/coronavirus/scurry-county-shelter-in-place/",
+                "place_fmt": "Scurry County",
+                "population_fmt": "17,000",
+                "date_effective_fmt": "effective March 27 at 11:59 p.m."
+            },
+            {
+                "place_nyt_style": "Smith County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Stay at home",
+                "population": 230221,
+                "formal_order": true,
+                "link_order": "https://www.smith-county.com/government/departments/corona-virus-information",
+                "link_localnews": "https://tylerpaper.com/news/local/smith-county-issues-stay-at-two-week-home-order-confirmed/article_726e1b44-7077-11ea-8b72-5f214d029874.html",
+                "place_fmt": "Smith County",
+                "population_fmt": "230,000",
+                "date_effective_fmt": "effective March 27 at 11:59 p.m."
+            },
+            {
+                "place_nyt_style": "Starr County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Stay at home",
+                "population": 64525,
+                "formal_order": true,
+                "link_order": "https://www.facebook.com/pg/starr.countytexas/photos/?tab=album&album_id=1508840295949560",
+                "link_localnews": "https://www.krgv.com/news/starr-county-judge-signs-shelter-in-place-order-effective-at-midnight/",
+                "place_fmt": "Starr County",
+                "population_fmt": "65,000",
+                "date_effective_fmt": "effective March 25 at 12:01 a.m."
+            },
+            {
+                "place_nyt_style": "Tarrant County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Stay at home",
+                "population": 2084931,
+                "formal_order": true,
+                "link_order": "http://www.tarrantcounty.com/content/dam/main/global/Covid-19/TarrantCountyExecutiveOrder-Executed-3-24-20%20-003.pdf",
+                "link_localnews": "https://www.star-telegram.com/news/coronavirus/article241453016.html",
+                "place_fmt": "Tarrant County",
+                "population_fmt": "2.1 million",
+                "date_effective_fmt": "effective March 24 at 11:59 p.m."
+            },
+            {
+                "place_nyt_style": "Travis County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Stay at home",
+                "population": 1248743,
+                "formal_order": true,
+                "link_order": "https://www.traviscountytx.gov/images/docs/200314-gathering-order.pdf",
+                "link_localnews": "https://www.statesman.com/news/20200324/coronavirus-shelter-in-place-orders-issued-for-travis-williamson-counties",
+                "place_fmt": "Travis County",
+                "population_fmt": "1.2 million",
+                "date_effective_fmt": "effective March 24 at 11:59 p.m."
+            },
+            {
+                "place_nyt_style": "Willacy County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Shelter in place",
+                "population": 21515,
+                "formal_order": true,
+                "link_order": "https://www.facebook.com/CountyofWillacy/posts/2555906858000956",
+                "link_localnews": "https://www.krgv.com/news/willacy-county-issues-shelter-in-place-order-following-1st-confirmed-virus-case/",
+                "place_fmt": "Willacy County",
+                "population_fmt": "22,000",
+                "date_effective_fmt": "effective March 26 at 11:01 p.m."
+            },
+            {
+                "place_nyt_style": "Williamson County",
+                "geography": "county",
+                "state": "TX",
+                "order": "Stay at home",
+                "population": 566719,
+                "formal_order": true,
+                "link_order": "https://www.roundrocktexas.gov/wp-content/uploads/2020/03/Stay-Home-Stay-Safe-Order-Judge-Bill-Gravell-Jr-COVID-19-Adopted-March-24-2020.pdf",
+                "link_localnews": "https://communityimpact.com/austin/georgetown/coronavirus/2020/03/24/just-in-williamson-county-issues-stay-at-home-order-through-april-13/",
+                "place_fmt": "Williamson County",
+                "population_fmt": "567,000",
+                "date_effective_fmt": "effective March 24 at 11:59 p.m."
+            }
+        ],
+        "statename": "Texas",
+        "blurb": "Gov. Greg Abbott has left it to local officials to impose the most restrictive orders, but millions of people in the nation's second largest state have been told to stay home, including in Harris County, which includes Houston; Dallas and Tarrant Counties in the Dallas-Fort Worth region; and Bexar County, which includes San Antonio. “Another person has died within the last 24 hours,” said Clay Jenkins, the Dallas County judge. “We’re headed to a point of no return, if we continue to dawdle.”",
+        "statewide": false
+    },
+    {
+        "key": "UT",
+        "values": [
+            {
+                "place_nyt_style": "Salt Lake County",
+                "geography": "county",
+                "state": "UT",
+                "order": "Stay at home",
+                "population": 1152633,
+                "formal_order": true,
+                "link_order": "https://slco.org/globalassets/1-site-files/health/programs/covid/pho/pho3.pdf",
+                "link_localnews": "https://www.sltrib.com/news/2020/03/29/coronavirus-cases-utah/",
+                "place_fmt": "Salt Lake County",
+                "population_fmt": "1.2 million",
+                "date_effective_fmt": "effective March 30 at 12:01 a.m."
+            },
+            {
+                "place_nyt_style": "Summit County",
+                "geography": "county",
+                "state": "UT",
+                "order": "Stay at home",
+                "population": 41933,
+                "formal_order": true,
+                "link_order": "https://summitcountyhealth.org/public-announcements/3-25-20-summit-county-issues-stay-at-home-order-to-residents/",
+                "link_localnews": "https://www.sltrib.com/news/2020/03/25/summit-county-orders/",
+                "place_fmt": "Summit County",
+                "population_fmt": "42,000",
+                "date_effective_fmt": "effective March 27 at 12:01 a.m."
+            }
+        ],
+        "statename": "Utah",
+        "blurb": "Summit County, a popular area for skiing and tourism, became the first in Utah to issue such a restriction, The Salt Lake Tribune reported. Salt Lake County also issued a similar order. “The goals are to save lives and stop our hospital system from being overrun,” Mayor Jenny Wilson of Salt Lake County said.  ",
+        "statewide": false
+    },
+    {
+        "key": "VT",
+        "values": [
+            {
+                "place_nyt_style": "Vermont",
+                "geography": "state",
+                "state": "VT",
+                "order": "Stay at home",
+                "population": 626299,
+                "formal_order": true,
+                "link_order": "https://governor.vermont.gov/sites/scott/files/documents/ADDENDUM%206%20TO%20EXECUTIVE%20ORDER%2001-20.pdf",
+                "link_localnews": "https://www.burlingtonfreepress.com/story/news/local/2020/03/24/vermont-gov-phil-scott-all-vermonters-should-stay-home-order/2909062001/",
+                "place_fmt": "Statewide",
+                "population_fmt": "626,000",
+                "date_effective_fmt": "effective March 25 at 5 p.m."
+            }
+        ],
+        "statename": "Vermont",
+        "blurb": "“I need all Vermonters to understand that the more quickly and closely we follow these stay-at-home measures, the faster and safer we can get through this and get our daily lives, and our economy, moving again,\" Gov. Phil Scott said. ",
+        "statewide": true
+    },
+    {
+        "key": "VA",
+        "values": [
+            {
+                "place_nyt_style": "Virginia",
+                "geography": "state",
+                "state": "VA",
+                "order": "Stay at home",
+                "population": 8517685,
+                "formal_order": true,
+                "link_order": "https://www.governor.virginia.gov/newsroom/all-releases/2020/march/headline-855702-en.html",
+                "link_localnews": "https://www.roanoke.com/news/virginia/gov-northam-to-issue-stay-at-home-order/article_b80fb621-1eca-57dd-b8e4-67c8a7dd8ebc.html",
+                "place_fmt": "Statewide",
+                "population_fmt": "8.5 million",
+                "date_effective_fmt": "effective March 30"
+            }
+        ],
+        "statename": "Virginia",
+        "blurb": "Gov. Ralph Northam, who shut down schools and nonessential businesses and banned gatherings of more than 10 people, had said that issuing a stay-at-home order was a matter of semantics. But after seeing beaches and other public areas packed with people, he issued a formal order. \"It is clear more people still need to hear this basic message: Stay home.\" ",
+        "statewide": true
+    },
+    {
+        "key": "WA",
+        "values": [
+            {
+                "place_nyt_style": "Washington ",
+                "geography": "state",
+                "state": "WA",
+                "order": "Stay at home",
+                "population": 7535591,
+                "formal_order": true,
+                "link_order": "https://www.documentcloud.org/documents/6817957-20-25-Coronovirus-Stay-Safe-Stay-Healthy.html",
+                "link_localnews": "https://www.seattletimes.com/seattle-news/inslee-to-hold-televised-address-monday-evening-to-announce-enhanced-strategies-on-covid-19/",
+                "place_fmt": "Statewide",
+                "population_fmt": "7.5 million",
+                "date_effective_fmt": "effective March 23"
+            }
+        ],
+        "statename": "Washington",
+        "blurb": "Gov. Jay Inslee tried begging people to stay at home in Washington State, which has among the worst outbreaks of the virus in the country. Then he made it mandatory. “The fastest way to get back to normal is to hit this hard,” he said. ",
+        "statewide": true
+    },
+    {
+        "key": "WV",
+        "values": [
+            {
+                "place_nyt_style": "West Virginia",
+                "geography": "state",
+                "state": "WV",
+                "order": "Stay at home",
+                "population": 1836843,
+                "formal_order": true,
+                "link_order": "https://dhhr.wv.gov/COVID-19/Pages/Governor-Issues-Stay-at-Home-Order.aspx",
+                "link_localnews": "https://www.wvgazettemail.com/coronavirus/justice-issues-stay-at-home-order-closes-non-essential-businesses/article_37bc0158-d9b4-5255-83d1-cc4dd57f409b.html",
+                "place_fmt": "Statewide",
+                "population_fmt": "1.8 million",
+                "date_effective_fmt": "effective March 24 at 8 p.m."
+            }
+        ],
+        "statename": "West Virginia",
+        "blurb": "West Virginia was the last state to have a confirmed case of the virus, but Gov. Jim Justice quickly joined a chorus of other governors calling on residents to stay inside. “A stay-at-home order is not martial law,” he said, reminding residents that they could still leave their homes for food and outdoor activity. But he warned: “The magnitude of this is unbelievable.” ",
+        "statewide": true
+    },
+    {
+        "key": "WI",
+        "values": [
+            {
+                "place_nyt_style": "Wisconsin",
+                "geography": "state",
+                "state": "WI",
+                "order": "Stay at home",
+                "population": 5813568,
+                "formal_order": true,
+                "link_order": "https://www.wpr.org/sites/default/files/health_order_12_safer_at_home.pdf",
+                "link_localnews": "https://www.wpr.org/evers-administration-issues-stay-home-order-wisconsin",
+                "place_fmt": "Statewide",
+                "population_fmt": "5.8 million",
+                "date_effective_fmt": "effective March 25 at 8 a.m."
+            }
+        ],
+        "statename": "Wisconsin",
+        "blurb": "Gov. Tony Evers initially thought he would not have to issue such an order, but later changed his mind. “You can still get out and walk the dogs — it’s good exercise and it’s good for everyone’s mental health — but please don’t take any other unnecessary trips,\" he said. \"Limit your travel to essential needs like going to the doctor, grabbing groceries or getting medication.” ",
+        "statewide": true
+    },
+    {
+        "key": "WY",
+        "values": [
+            {
+                "place_nyt_style": "Jackson",
+                "geography": "city",
+                "state": "WY",
+                "order": "Stay at home",
+                "population": 10429,
+                "formal_order": true,
+                "link_order": "https://www.jacksonwy.gov/DocumentCenter/View/3048/Mar28-EmOrd1249-StayAtHomeOrder?bidId=",
+                "link_localnews": "https://trib.com/news/local/casper/jackson-issues-shelter-in-place-order-to-limit-spread-of/article_40c9fa29-c59b-540f-b4cd-7b211b6eb335.html",
+                "place_fmt": "Jackson",
+                "population_fmt": "10,000",
+                "date_effective_fmt": "effective March 28"
+            }
+        ],
+        "statename": "Wyoming",
+        "blurb": "Jackson, a popular tourist destination for skiers in the Jackson Hole valley, was the first town in the state to issue a stay-at-home order, according to the Casper Star-Tribune. ",
+        "statewide": false
+    }
+]

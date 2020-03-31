@@ -16,8 +16,7 @@ def scrape():
         lookup = 'var NYTG_places = '
         if lookup in x.text:
             x.string.encode('utf-8')
-            json_object = json.loads(x.text[x.text.index(
-                lookup)+len(lookup):x.text.index('NYTG.watch(')])  # this is the json object
+            json_object = json.loads(x.text[x.text.index(lookup)+len(lookup):x.text.index('var NYTG_multiples')])  # this is the json object
 
             # open('tt.json', 'w').write(
             #     x.text[x.text.index(lookup)+len(lookup):x.text.index('NYTG.watch(')])
@@ -57,7 +56,8 @@ def scrape():
             if(len(state_entry['county_data']) == 0):
                 del state_entry['county_data']
 
-    # with open('inhome.json', 'w') as output:
-    #     # json.dump(json_object, output)
-
+    with open('inhome.json', 'w') as output:
+        json.dump(json_object, output)
+    
+    print(json_object)
     return json_object
