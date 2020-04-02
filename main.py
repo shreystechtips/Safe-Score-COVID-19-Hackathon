@@ -124,6 +124,8 @@ def get_loc_json(location):
         short_county = raw_county[:raw_county.index(" County")]
     if "City" in short_county:
         short_county = raw_county[:raw_county.index(" City")]
+    if "Parish" in short_county:
+        short_county = raw_county[:raw_county.index(" Parish")]
     covid = STATE_DATA[raw_state][next(
         x for x in STATE_DATA[raw_state] if short_county in x)]
     covid_old = PREV_DATA[raw_state][next(
@@ -316,7 +318,8 @@ def get_pop_data():
             'Area in square miles - Land area', 'Density per square mile of land area - Population']
     data = pd.read_csv(
         open(POP_FILE, 'r', encoding='ISO-8859-1'), skiprows=1, usecols=cols)
-    data = data[data['Geographic area.1'].str.contains(' County')]
+    data = data[data['Geographic area.1'].str.contains(
+        ' County') | data['Geographic area.1'].str.contains(' Parish')]
     total_data = {}
     for index, col in data.iterrows():
         state = col['Geographic area'].split(' - ')[1]
