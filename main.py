@@ -29,8 +29,9 @@ PREV_DATA = None
 INHOME_ORDERS = None
 POP_DATA = None
 POP_AGE_DATA = None
-POP_MINMAX = [0, 0]
-POP_DENSITY_MINMAX = [0, 0]
+POP_MINMAX = [0, 9818605]
+POP_DENSITY_MINMAX = [0, 69468]
+
 
 MASTER_DATE = None
 geolocator = Nominatim(user_agent=__name__)
@@ -52,7 +53,9 @@ def set_data(date):
 
 
 def get_latest_data_date():
-    date = datetime.date(2020, 3, 31)
+    # TODO: remove for errors
+    # datetime.date(2020, 3, 31)
+    date = datetime.datetime.now()
     url = CITY_DATA_BASE_URL + date.strftime("%m-%d-%Y.csv")
     response = requests.head(url)
     if response.status_code == 404:
@@ -92,7 +95,7 @@ def get_pop(population):
         try:
             longest_int = int(population[:i])
         except:
-            print(longest_int, 'hello')
+            # print(longest_int, 'hello')
             return longest_int
 
 
@@ -105,9 +108,9 @@ def get_loc_json(location):
         MASTER_DATE = get_latest_data_date()
         set_data(MASTER_DATE)
     # TODO: ADD BACK IN
-    # elif (datetime.datetime.now() - MASTER_DATE) > datetime.timedelta(days=1):
-    #     MASTER_DATE = get_latest_data_date()
-    #     set_data(MASTER_DATE)
+    elif (datetime.datetime.now() - MASTER_DATE) > datetime.timedelta(days=1):
+        MASTER_DATE = get_latest_data_date()
+        set_data(MASTER_DATE)
 
     raw_state = location.raw['address']['state']
     raw_county = location.raw['address']['county']
@@ -137,17 +140,19 @@ def get_loc_json(location):
     ret['State'] = raw_state
     ret['County_Coords'] = {'lat': covid['Lat'], 'lng': covid['Long_']}
     ret['Active Cases'] = covid['Confirmed']
-    ret['Infected Rate Growth'] = round(calculate_divide(
-        covid['Confirmed'], covid_old['Confirmed']), 2)
+    ret['Infected Rate Growth'] = int(round(calculate_divide(
+        covid['Confirmed'], covid_old['Confirmed']), 2)*100)
     ret['Deaths'] = covid['Deaths']
-    ret['Death Rate Growth'] = round(calculate_divide(
-        covid['Deaths'], covid_old['Deaths']), 2)
+    ret['Death Rate Growth'] = int(round(calculate_divide(
+        covid['Deaths'], covid_old['Deaths']), 2)*100)
     ret['Stay Home'] = at_home(location)
     ret['High Risk Population'] = get_age_pop_for_county(
         raw_state, raw_county, POP_AGE_DATA)
     if(ret['High Risk Population'] <= 0):
         ret['High Risk Population'] = get_age_pop_for_county(
             raw_state, short_county, POP_AGE_DATA)
+    ret['High Risk Population'] = round(
+        ret['High Risk Population'] * 100/ret['Population'], 2)
     if not ret["Population"]:
         ret["Population"] = get_pop(pop['Population'])
     set_growth_index(ret)
@@ -191,16 +196,38 @@ def get_clamped_pop(pop, scale):
     return pop
 
 
+WEIGHTS = {
+    'active': 180,
+    'density': 30,
+    'infect_grow': 3.75,
+    'death_grow': 5,
+    'deaths': 1000,
+    'high_risk': .5
+
+
+}
+
+
 def set_growth_index(ret):
-    global POP_MINMAX
-    global POP_DENSITY_MINMAX
-    x = normalize_calc_value(ret['Active Cases'])*get_clamped_pop(normalize_calc_value(ret['Population Density']), POP_DENSITY_MINMAX)*ret['Infected Rate Growth'] * \
-        ret['Death Rate Growth']*normalize_calc_value(
-            ret['Deaths']) * ret['High Risk Population'] / get_clamped_pop(ret['Population'], POP_MINMAX)/int(os.getenv("DIVIDE_X"))
+    # infected, density, grow infect, high risk populations, grow death, deaths
+    # x = normalize_calc_value(ret['Active Cases'] * 100 * WEIGHTS['active'] / ret['Population']) + normalize_calc_value(ret['Population Density'] / 100 * POP_DENSITY_MINMAX[1] * WEIGHTS['density']) + (
+    #     ret['Infected Rate Growth']/100 * WEIGHTS['infect_grow']) + (ret['High Risk Population'] * WEIGHTS['high_risk']) + (ret['Death Rate Growth']/100 * WEIGHTS['death_grow']) + (ret['Deaths']/ret['Population'] * 100 * WEIGHTS['deaths'])
+    infected = ret['Active Cases'] / \
+        ret['Population'] * 100 * WEIGHTS['active']
+    density = ret['Population Density'] / \
+        normalize_calc_value(POP_DENSITY_MINMAX[1]) * 100 * WEIGHTS['density']
+    infect_grow = ret['Infected Rate Growth'] / 100 * WEIGHTS['infect_grow']
+    death_grow = ret['Death Rate Growth'] / 100 * WEIGHTS['death_grow']
+    deaths = ret['Deaths']/ret['Population'] * 100 * WEIGHTS['deaths']
+    old = ret['High Risk Population'] * WEIGHTS['high_risk']
+
+    x = infected + density + infect_grow + death_grow + deaths + old
+
     i_term = 0.17
     k_term = 100
     r_term = 0.1
-    c_term = 42
+    c_term = 0
+
     try:
         x = x + c_term
         e_calc = math.pow(math.e, r_term*x)
@@ -211,21 +238,8 @@ def set_growth_index(ret):
         print('oof')
         ret['Safe Score'] = 100
 
-    # try:
-    #     g_term = 470
-    #     k_term = 100
-    #     x_shift = -1*g_term/k_term
-    #     frac_calc = -1* g_term* (x-x_shift) + k_term
-    #     if frac_calc <= 0:
-    #         frac_calc = 100
-    #     print(frac_calc)
-    #     ret['Safe Score 2'] = frac_calc
-    # except:
-    #     ret['Safe Score 2'] = 100
-
     print(ret['Safe Score'])
     ret['Safe Score'] = 100 - ret['Safe Score']
-    # ret['Safe Score 2'] = 100 - ret['Safe Score 2']
 
 
 def calculate_divide(val1, val2):
@@ -286,8 +300,15 @@ def clamp_pop_vals(data):
         low = min(get_pop(value), low)
         hi = max(get_pop(value), hi)
     POP_MINMAX = [low, hi]
-    POP_DENSITY_MINMAX = [data['Density per square mile of land area - Population'].min(
-    ), data['Density per square mile of land area - Population'].max()]
+    low = int(data['Density per square mile of land area - Population'].min())
+    hi = 0
+    for value in data['Density per square mile of land area - Population']:
+        value = str(value)
+        low = min(get_pop(value), low)
+        hi = max(get_pop(value), hi)
+    POP_DENSITY_MINMAX = [low, hi]
+    print(POP_DENSITY_MINMAX)
+    print(POP_MINMAX)
 
 
 def get_pop_data():
@@ -297,7 +318,6 @@ def get_pop_data():
         open(POP_FILE, 'r', encoding='ISO-8859-1'), skiprows=1, usecols=cols)
     data = data[data['Geographic area.1'].str.contains(' County')]
     total_data = {}
-    # clamp_pop_vals(data)
     for index, col in data.iterrows():
         state = col['Geographic area'].split(' - ')[1]
         county = col['Geographic area.1']
@@ -333,7 +353,7 @@ def aggregate_city_states(date):
             if not y['Province_State'] in total_data:
                 total_data[y['Province_State']] = {}
             total_data[y['Province_State']][y['Admin2']] = y
-            #total_data[y['Province_State']][y['Admin2']]['High Risk Population'] = get_age_pop_for_county(y['Province_State'],y['Admin2'],pop_age_data)
+            # total_data[y['Province_State']][y['Admin2']]['High Risk Population'] = get_age_pop_for_county(y['Province_State'],y['Admin2'],pop_age_data)
     total = {}
     return total_data
 
