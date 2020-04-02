@@ -2,7 +2,7 @@ from flask import request, abort, jsonify, json, render_template, redirect, url_
 import flask
 from flask_cors import CORS
 import requests
-from datetime import datetime, timedelta
+import datetime
 from dotenv import load_dotenv
 import os
 import json
@@ -46,17 +46,17 @@ def set_data(date):
     global STATE_DATA
     STATE_DATA = aggregate_city_states(date)
     global PREV_DATA
-    PREV_DATA = aggregate_city_states(date-timedelta(days=5))
+    PREV_DATA = aggregate_city_states(date-datetime.timedelta(days=5))
     global INHOME_ORDERS
     INHOME_ORDERS = nyt_inhome.scrape()
 
 
 def get_latest_data_date():
-    date = datetime.date(2020,3,31)
+    date = datetime.date(2020, 3, 31)
     url = CITY_DATA_BASE_URL + date.strftime("%m-%d-%Y.csv")
     response = requests.head(url)
     if response.status_code == 404:
-        return date-timedelta(days=1)
+        return date-datetime.timedelta(days=1)
     else:
         return date
 
