@@ -2,7 +2,7 @@ from flask import request, abort, jsonify, json, render_template, redirect, url_
 import flask
 from flask_cors import CORS
 import requests
-from datetime import datetime, timedelta
+from datetime import timedelta
 from dotenv import load_dotenv
 import os
 import json
@@ -52,7 +52,7 @@ def set_data(date):
 
 
 def get_latest_data_date():
-    date = date(2020,3,31)
+    date = datetime.date(2020,3,31)
     url = CITY_DATA_BASE_URL + date.strftime("%m-%d-%Y.csv")
     response = requests.head(url)
     if response.status_code == 404:
