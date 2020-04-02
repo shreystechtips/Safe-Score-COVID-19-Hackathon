@@ -104,9 +104,10 @@ def get_loc_json(location):
     if not MASTER_DATE:
         MASTER_DATE = get_latest_data_date()
         set_data(MASTER_DATE)
-    elif (datetime.now() - MASTER_DATE) > timedelta(days=1):
-        MASTER_DATE = get_latest_data_date()
-        set_data(MASTER_DATE)
+    # TODO: ADD BACK IN
+    # elif (datetime.datetime.now() - MASTER_DATE) > datetime.timedelta(days=1):
+    #     MASTER_DATE = get_latest_data_date()
+    #     set_data(MASTER_DATE)
 
     raw_state = location.raw['address']['state']
     raw_county = location.raw['address']['county']
