@@ -242,6 +242,8 @@ def set_growth_index(ret):
 
     print(ret['Safe Score'])
     ret['Safe Score'] = 100 - ret['Safe Score']
+    ret['Infected Rate Growth'] -= 100
+    ret['Death Rate Growth'] -= 100
 
 
 def calculate_divide(val1, val2):
