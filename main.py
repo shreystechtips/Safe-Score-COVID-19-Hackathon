@@ -153,6 +153,8 @@ def get_loc_json(location):
     if(ret['High Risk Population'] <= 0):
         ret['High Risk Population'] = get_age_pop_for_county(
             raw_state, short_county, POP_AGE_DATA)
+        if(ret['High Risk Population'] <= 0):
+            print(short_county)
     ret['High Risk Population'] = round(
         ret['High Risk Population'] * 100/ret['Population'], 2)
     if not ret["Population"]:
@@ -242,8 +244,8 @@ def set_growth_index(ret):
 
     print(ret['Safe Score'])
     ret['Safe Score'] = 100 - ret['Safe Score']
-    ret['Infected Rate Growth'] -= 100
-    ret['Death Rate Growth'] -= 100
+    ret['Infected Rate Growth'] = ret['Infected Rate Growth'] - 100 if not ret['Infected Rate Growth'] == 0 else ret['Infected Rate Growth']
+    ret['Death Rate Growth'] = ret['Death Rate Growth'] - 100 if not ret['Death Rate Growth'] == 0 else ret['Death Rate Growth']
 
 
 def calculate_divide(val1, val2):
