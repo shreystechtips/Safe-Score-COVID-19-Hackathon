@@ -114,11 +114,13 @@ def get_loc_json(location):
 
     raw_state = location.raw['address']['state']
     raw_county = location.raw['address']['county']
-    # print(lat, ',', lng, ':', STATE_DATA[raw_state]
-    #       [raw_county[:raw_county.index(" County")]])
-    # print(POP_DATA[raw_state][raw_county])s
-    # print(STATE_DATA[raw_state])
-    # print(raw_county)
+
+    # NOTE: NORMALIZES LOCATION VALUE FOR WA D.C.
+
+    if raw_county == "Washington" and raw_state == "District of Columbia":
+        location.raw['address']['county'] = "District of Columbia"
+        raw_county = "District of Columbia"
+
     short_county = raw_county
     if "County" in raw_county:
         short_county = raw_county[:raw_county.index(" County")]
@@ -126,13 +128,13 @@ def get_loc_json(location):
         short_county = raw_county[:raw_county.index(" City")]
     if "Parish" in short_county:
         short_county = raw_county[:raw_county.index(" Parish")]
-    covid = STATE_DATA[raw_state][next(
-        x for x in STATE_DATA[raw_state] if short_county in x)]
-    covid_old = PREV_DATA[raw_state][next(
-        (x for x in PREV_DATA[raw_state] if short_county in x))]
 
+    key = next(x for x in PREV_DATA[raw_state] if short_county in x)
+    covid = STATE_DATA[raw_state][key]
+    covid_old = PREV_DATA[raw_state][key]
     pop = POP_DATA[raw_state][next(
         x for x in POP_DATA[raw_state] if short_county in x)]
+
     ret = {}
     ret['County'] = raw_county
     ret['Population'] = get_pop(pop['Population'])
@@ -244,8 +246,10 @@ def set_growth_index(ret):
 
     print(ret['Safe Score'])
     ret['Safe Score'] = 100 - ret['Safe Score']
-    ret['Infected Rate Growth'] = ret['Infected Rate Growth'] - 100 if not ret['Infected Rate Growth'] == 0 else ret['Infected Rate Growth']
-    ret['Death Rate Growth'] = ret['Death Rate Growth'] - 100 if not ret['Death Rate Growth'] == 0 else ret['Death Rate Growth']
+    ret['Infected Rate Growth'] = ret['Infected Rate Growth'] - \
+        100 if not ret['Infected Rate Growth'] == 0 else ret['Infected Rate Growth']
+    ret['Death Rate Growth'] = ret['Death Rate Growth'] - \
+        100 if not ret['Death Rate Growth'] == 0 else ret['Death Rate Growth']
 
 
 def calculate_divide(val1, val2):
@@ -323,7 +327,7 @@ def get_pop_data():
     data = pd.read_csv(
         open(POP_FILE, 'r', encoding='ISO-8859-1'), skiprows=1, usecols=cols)
     data = data[data['Geographic area.1'].str.contains(
-        ' County') | data['Geographic area.1'].str.contains(' Parish')]
+        ' County') | data['Geographic area.1'].str.contains(' Parish') | data['Geographic area.1'].str.contains('District')]
     total_data = {}
     for index, col in data.iterrows():
         state = col['Geographic area'].split(' - ')[1]
@@ -334,9 +338,9 @@ def get_pop_data():
     return total_data
 
 
-def get_age_pop_for_county(state, county, data):
-    data = data[data["STNAME"].str.contains(state)]
-    # print(data,state,county)
+def get_age_pop_for_county(state, county, data_in):
+    data = data_in[data_in["STNAME"].str.contains(state)]
+    # print(data, state, county)
     if "County".lower() in county.lower():
         county = county[:county.lower().index("county")]
     for i, row in data.iterrows():
