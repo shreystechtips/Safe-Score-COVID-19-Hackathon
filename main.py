@@ -277,13 +277,13 @@ CITY_DATA_BASE_URL = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/
 
 
 def get_county_data(date, data=None):
+    MASTER_DATE = get_latest_data_date()
     url = CITY_DATA_BASE_URL+date.strftime("%m-%d-%Y.csv")
     data = requests.get(url).content.decode('utf-8')[1:]
     if not os.path.isdir('generated_data'):
         os.makedirs('generated_data')
     FILE_NAME = './generated_data/'+date.strftime('%d%m%Y')+'.csv'
     write = open(FILE_NAME, 'w+')
-
     try:
         write.write(data)
     except Exception as e:
@@ -294,7 +294,6 @@ def get_county_data(date, data=None):
             'Last_Update', 'Lat', 'Long_', 'Confirmed', 'Deaths']
     # removed_cols: (['FIPS','Recovered','Active','Combined_Key'])
     f = open(FILE_NAME, 'r+')
-    print(f.read())
     data = pd.read_csv(f, usecols=cols,)  # parse_dates = ["Last_Update"]
     # data.rename(columns = {'Admin2':'City'}, inplace = True)
     return data[data['Country_Region'].str.contains('US')].to_dict("index")
@@ -375,6 +374,7 @@ def aggregate_city_states(date):
 POP_DATA = get_pop_data()
 POP_AGE_DATA = age_census.population_data()
 # open('pop_data.json','w').write(json.dumps(POP_DATA))
+MASTER_DATE = None
 MASTER_DATE = get_latest_data_date()
 set_data(MASTER_DATE)
 
