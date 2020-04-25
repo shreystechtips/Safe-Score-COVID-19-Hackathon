@@ -283,10 +283,11 @@ def get_county_data(date, data=None):
         os.makedirs('generated_data')
     FILE_NAME = './generated_data/'+date.strftime('%d%m%Y')+'.csv'
     write = open(FILE_NAME, 'w+')
+
     try:
         write.write(data)
-    except:
-        pass
+    except Exception as e:
+        print(e)
     write.close()
     print(date)
     cols = ['Admin2', 'Province_State', 'Country_Region',
