@@ -11,6 +11,7 @@ import pandas as pd
 from geopy.geocoders import Nominatim
 import numpy as np
 import math
+import pytz
 
 import age_census
 import nyt_inhome
@@ -55,9 +56,11 @@ def set_data(date):
 def get_latest_data_date():
     # TODO: remove for errors
     # datetime.date(2020, 3, 31)
-    date = datetime.datetime.now()
+    timezone = pytz.timezone("US/Pacific")
+    date = datetime.datetime.now(timezone)
     url = CITY_DATA_BASE_URL + date.strftime("%m-%d-%Y.csv")
     response = requests.head(url)
+    print(response.status_code)
     if response.status_code == 404:
         return date-datetime.timedelta(days=1)
     else:
