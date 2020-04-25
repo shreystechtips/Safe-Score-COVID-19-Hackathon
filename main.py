@@ -53,10 +53,12 @@ def set_data(date):
     INHOME_ORDERS = nyt_inhome.scrape()
 
 
+timezone = pytz.timezone("US/Pacific")
+
+
 def get_latest_data_date():
     # TODO: remove for errors
     # datetime.date(2020, 3, 31)
-    timezone = pytz.timezone("US/Pacific")
     date = datetime.datetime.now(timezone)
     url = CITY_DATA_BASE_URL + date.strftime("%m-%d-%Y.csv")
     response = requests.head(url)
@@ -111,7 +113,7 @@ def get_loc_json(location):
         MASTER_DATE = get_latest_data_date()
         set_data(MASTER_DATE)
     # TODO: ADD BACK IN
-    elif (datetime.datetime.now() - MASTER_DATE) > datetime.timedelta(days=1):
+    elif (datetime.datetime.now(timezone) - MASTER_DATE) > datetime.timedelta(days=1):
         MASTER_DATE = get_latest_data_date()
         set_data(MASTER_DATE)
 
