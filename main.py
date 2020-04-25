@@ -294,6 +294,7 @@ def get_county_data(date, data=None):
             'Last_Update', 'Lat', 'Long_', 'Confirmed', 'Deaths']
     # removed_cols: (['FIPS','Recovered','Active','Combined_Key'])
     f = open(FILE_NAME, 'r+')
+    print(f.read())
     data = pd.read_csv(f, usecols=cols,)  # parse_dates = ["Last_Update"]
     # data.rename(columns = {'Admin2':'City'}, inplace = True)
     return data[data['Country_Region'].str.contains('US')].to_dict("index")
