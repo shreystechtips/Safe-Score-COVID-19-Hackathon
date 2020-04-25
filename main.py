@@ -288,6 +288,7 @@ def get_county_data(date, data=None):
     except:
         pass
     write.close()
+    print(date)
     cols = ['Admin2', 'Province_State', 'Country_Region',
             'Last_Update', 'Lat', 'Long_', 'Confirmed', 'Deaths']
     # removed_cols: (['FIPS','Recovered','Active','Combined_Key'])
