@@ -9,7 +9,7 @@ colorama==0.4.3
 cycler==0.10.0
 decorator==4.4.2
 Flask==1.1.1
-Flask-Cors==3.0.8
+Flask-Cors==3.0.9
 foreman==0.9.7
 future==0.18.2
 geocoder==1.38.1
